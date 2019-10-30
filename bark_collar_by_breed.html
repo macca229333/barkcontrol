@@ -1,0 +1,463 @@
+<style>
+    #search-breed {
+        width: 100%;
+        font-size: 16px;
+        padding: 12px 20px 12px 40px;
+        border: 1px solid black;
+        margin-bottom: 12px;
+
+    }
+    #breed-table {
+        border-collapse: collapse;
+        width: 100%;
+        border: 1px solid black;
+        font-size: 18px;
+    }
+    #breed-table td {
+        border: 1px solid black;
+        text-align: left;
+        padding: 5px;
+    }
+
+</style>
+<input type="text" id="search-breed" onkeyup="searchBreed()" placeholder="Search for breed...">
+<table id="breed-table">
+    <tr>
+        <td></td>
+        <td>Dog Breed</td>
+        <td>Recommendations</td>
+        <td>Suitable Collars</td>
+    </tr>
+    <tr>
+        <td>IMAGE</td>
+        <td>Akita</td>
+        <td>Although the Akita is not (generally) considered a renowned barker, they can be very headstrong dogs none
+            the less! We recommend static electric collars for this breed</td>
+        <td>
+            <ul>
+                <li>DogWatch BT-7</li>
+                <li>E-Collar Technologies BP-504</li>
+                <li>SportDOG SBC-R</li>
+                <li>SportDOG SBC-6</li>
+            </ul>
+        </td>
+    </tr>
+    <tr>
+        <td>IMAGE</td>
+        <td>Alaskan Malamute</td>
+        <td>These dogs can certainly howl! The Malamute is a very dominant breed and we recommend static electric
+            collars.</td>
+        <td>
+            <ul>
+                <li>Dogtra YS300*</li>
+                <li>E-Collar Technologies BP-504</li>
+                <li>SportDOG SBC-R (barking only)</li>
+                <li>Petsafe Rechargeable Spray Bark Collar</li>
+            </ul>
+        </td>
+    </tr>
+    <tr>
+        <td>IMAGE</td>
+        <td>Aussie Bulldog</td>
+        <td>The Aussie Bulldog is a strong and energetic breed. If barking habits are persistent, we recommend a static
+             electric barking collar.</td>
+        <td>
+            <ul>
+                <li>DogWatch BT-7</li>
+                <li>SportDOG SBC-R</li>
+                <li>E-Collar Technologies BP-504</li>
+                <li>SportDOG SBC-6</li>
+            </ul>
+        </td>
+    </tr>
+    <tr>
+        <td>IMAGE</td>
+        <td>Aussie Shepherd</td>
+        <td>The Australian Shepherd is a popular working breed dog with a strong temperament. Their long coat doesn't
+            work well with citronella spray collars which is why we recommend static electric bark collars.</td>
+        <td>
+            <ul>
+                <li>SportDOG SBC-R</li>
+                <li>DogWatch BT-7</li>
+                <li>E-Collar Technologies BP-504</li>
+                <li>SportDOG SBC-6</li>
+            </ul>
+        </td>
+    </tr>
+    <tr>
+        <td>IMAGE</td>
+        <td>Beagle</td>
+        <td>The Beagle is a popular dog breed and they are not shy when it comes to excessive barking. Although the
+            Beagle is a much-loved family pet, they can be very headstrong which is why we recommend static electric
+            bark collars.</td>
+        <td>
+            <ul>
+                <li>Dogtra YS300*</li>
+                <li>E-Collar Technologies BP-504</li>
+                <li>DogWatch BT-7</li>
+                <Li>Petsafe Basic Bark Collar</Li>
+            </ul>
+        </td>
+    </tr>
+    <tr>
+        <td>IMAGE</td>
+        <td>Belgian Malinois</td>
+        <td>The Belgian Malinois is a very intelligent working breed dog. Citronella spray collars will not bother this
+            breed which is why we only recommend static electric bark collars.</td>
+        <td>
+            <ul>
+                <li>Dogtra YS600</li>
+                <li>SportDOG SBC-R</li>
+                <li>DogWatch BT-7</li>
+                <li>SportDOG SBC-6</li>
+            </ul>
+        </td>
+    </tr>
+    <tr>
+        <td>IMAGE</td>
+        <td>Bichon Frise</td>
+        <td>Intelligent and affectionate pet breed that can become a very strong yapper! Citronella spray bark collars
+            may be an effective bark control option. If your dog has a stubborn personality, we recommend using a static
+            electric bark collar.</td>
+        <td>
+            <ul>
+                <li>Petsafe Little Dog Deluxe</li>
+                <li>Dogtra YS300*</li>
+                <li>Petsafe Little Dog Spray</li>
+            </ul>
+        </td>
+    </tr>
+    <tr>
+        <td>IMAGE</td>
+        <td>Blue Heeler/Aussie Cattle</td>
+        <td>The iconic Australian working dog. When it comes to this breed, forget about citronella spray collars! Due
+            to their intelligence and strong temperament, we only recommend static electric bark collars.</td>
+        <td>
+            <ul>
+                <li>SportDOG SBC-R</li>
+                <li>DogWatch BT-7</li>
+                <li>E-Collar Technologies BP-504</li>
+                <li>SportDOG SBC-6</li>
+            </ul>
+        </td>
+    </tr>
+    <tr>
+        <td>IMAGE</td>
+        <td>Border Collie</td>
+        <td>Very energetic working dog that often barks while running making spray collars ineffective. We only
+            recommend static electric bark collars for Border Collies.</td>
+        <td>
+            <ul>
+                <li>SportDOG SBC-R</li>
+                <li>E-Collar Technologies BP-504</li>
+                <li>DogWatch BT-7</li>
+                <li>SportDOG SBC-6</li>
+            </ul>
+        </td>
+    </tr>
+    <tr>
+        <td>IMAGE</td>
+        <td>Boxer</td>
+        <td>Highly intelligent dog that can be very boisterous. Spray collars have worked in the past on more timid
+            boxers but we generally recommend manual set static electric bark collars.</td>
+        <td>
+            <ul>
+                <li>SportDOG SBC-R</li>
+                <li>Dogtra YS300*</li>
+                <li>Petsafe Rechargeable Spray Bark Collar</li>
+                <li>DogWatch BT-7</li>
+            </ul>
+        </td>
+    </tr>
+    <tr>
+        <td>IMAGE</td>
+        <td>Bull Arab</td>
+        <td>Headstrong Australian bred pig hunting dog. We only recommend static electric bark collars for this breed.
+        </td>
+        <td>
+            <ul>
+                <li>Dogtra YS600</li>
+                <li>SportDOG SBC-R</li>
+                <li>SportDOG SBC-6</li>
+            </ul>
+        </td>
+    </tr>
+    <tr>
+        <td>IMAGE</td>
+        <td>Bullmastiff</td>
+        <td>A headstrong devoted guard and hunting dog. We recommend static electric bark collars.</td>
+        <td>
+            <ul>
+                <li>Dogtra YS600</li>
+                <li>SportDOG SBC-R</li>
+                <li>SportDOG SBC-6</li>
+            </ul>
+        </td>
+    </tr>
+    <tr>
+        <td>IMAGE</td>
+        <td>Bull Terrier</td>
+        <td>Not a big barking customer. Although they are very loyal, they can be a very headstrong and stubborn dog. We
+            recommend static electric collars.</td>
+        <td>
+            <ul>
+                <li>Dogtra YS600</li>
+                <li>SportDOG SBC-R</li>
+                <li>DogWatch BT-7</li>
+                <li>SportDOG SBC-6</li>
+            </ul>
+        </td>
+    </tr>
+    <tr>
+        <td>IMAGE</td>
+        <td>Cairn Terrier</td>
+        <td>A lively and loveable pet dog that is prone to defensive barking. Citronella collars can be a successful
+            bark control option, however, if your dog is running and barking we recommend a static electric bark collar.
+        </td>
+        <td>
+            <ul>
+                <li>Dogtra YS300*</li>
+                <li>E-Collar Technologies</li>
+                <li>Petsafe Little Dog Spray Bark Collar</li>
+            </ul>
+        </td>
+    </tr>
+    <tr>
+        <td>IMAGE</td>
+        <td>Cavalier King Charles</td>
+        <td>Another loveable pet breed dog that responds well to citronella bark collars. If your dog has a stubborn
+            temperament, we recommend a manual set static electric bark collar.</td>
+        <td>
+            <ul>
+                <li>Dogtra YS300*</li>
+                <li>Petsafe Little Dog Deluxe Bark Collar</li>
+                <li>E-Collar Technologies BP-504</li>
+                <li>Petsafe Little Dog Spray</li>
+            </ul>
+        </td>
+    </tr>
+    <tr>
+        <td>IMAGE</td>
+        <td>Chihuahua / Toy Breeds</td>
+        <td>One of the smallest breeds, but boy can they bark! Due to their size, the number of options is limited. You
+            can go with a citronella spray collar or static electric bark collar for this breed.</td>
+        <td>
+            <ul>
+                <li>Petsafe Deluxe Little Dog Bark Collar</li>
+                <li>Petsafe Little Dog Spray Bark Collar</li>
+            </ul>
+        </td>
+    </tr>
+    <tr>
+        <td>IMAGE</td>
+        <td>Cocker Spaniel</td>
+        <td>A moderate barking dog. Citronella spray collars have been successful in the past however we do recommend a
+             manual set static electric bark collar.</td>
+        <td>
+            <ul>
+                <li>Dogtra YS300*</li>
+                <li>DogWatch BT-7</li>
+                <li>Petsafe Rechargeable Spray Collar</li>
+            </ul>
+        </td>
+    </tr>
+    <tr>
+        <td>IMAGE</td>
+        <td>Corgi</td>
+        <td>Generally a low-level barker. Spray collars can be effective in most cases. If you don't find success with a
+            citronella spray collar, we recommend a manual set static electric bark collar.</td>
+        <td>
+            <ul>
+                <li>Dogtra YS300*</li>
+                <li>DogWatch BT-7</li>
+                <li>Petsafe Rechargeable Spray Bark Collar</li>
+            </ul>
+        </td>
+    </tr>
+    <tr>
+        <td>IMAGE</td>
+        <td>Dachshund</td>
+        <td>Can be a persistent little barker! Spray collars are effective on this breed however if your dog is running
+            and barking we recommend a manual set static electric bark collar. </td>
+        <td>
+            <ul>
+                <li>Dogtra YS300*</li>
+                <li>DogWatch BT-7</li>
+                <li>Petsafe Deluxe Little Dog Bark Collar</li>
+                <li>Petsafe Little Dog Spray Collar</li>
+            </ul>
+        </td>
+    </tr>
+    <tr>
+        <td>IMAGE</td>
+        <td>Dalmation</td>
+        <td>Can be a very highly strung and excitable dog without exercise and stimulation. We recommend a static
+            electric bark collar.</td>
+        <td>
+            <ul>
+                <li>SportDOG SBC-R</li>
+                <li>DogWatch BT-7</li>
+                <li>E-Collar Technologies BP-504</li>
+                <li>SportDOG SBC-6</li>
+            </ul>
+        </td>
+    </tr>
+    <tr>
+        <td>IMAGE</td>
+        <td>Doberman</td>
+        <td>Very loud barking dog that can be excessive to all concerned! We definitely recommend static electric bark
+            collars for this breed.</td>
+        <td>
+            <ul>
+                <li>SportDOG SBC-R</li>
+                <li>Dogtra YS600</li>
+                <li>DogWatch BT-7</li>
+                <li>SportDOG SBC-6</li>
+            </ul>
+        </td>
+    </tr>
+    <tr>
+        <td>IMAGE</td>
+        <td>Fox Terrier</td>
+        <td>Very active and sometimes very persistent little barker. Even though they is small in size, a static
+            electric collar is often required, especially if barking is territorial.</td>
+        <td>
+            <ul>
+                <li>DogWatch BT-7</li>
+                <li>E-Collar Technologies BP-504</li>
+                <li>Petsafe Deluxe Little Dog Bark Collar</li>
+                <li>Dogtra YS300*</li>
+            </ul>
+        </td>
+    </tr>
+    <tr>
+        <td>IMAGE</td>
+        <td>French Bulldog</td>
+        <td>Very active and sometimes very persistent little barker. Even though it is small in size a static collar is
+            often required, especially if barking is territorial.</td>
+        <td>
+            <ul>
+                <li>Dogtra YS300*</li>
+                <li>DogWatch BT-7</li>
+                <li>Petsafe Deluxe Little Dog Bark Collar</li>
+                <li>E-Collar Technologies BP-504</li>
+            </ul>
+        </td>
+    </tr>
+    <tr>
+        <td>IMAGE</td>
+        <td>German Shepherd</td>
+        <td>Bold, strong and intelligent. Static electric bark collars are the only option we recommend for German
+            Shepherds.</td>
+        <td>
+            <ul>
+                <li>Dogtra YS600</li>
+                <li>SportDOG SBC-R</li>
+                <li>DogWatch BT-7</li>
+            </ul>
+        </td>
+    </tr>
+    <tr>
+        <td>IMAGE</td>
+            <td>Golden Retriever</td>
+        <td>Depending on the individual, we do get some success with spray barking collars however we do recommend
+            static electric bark collars in most situations.</td>
+        <td>
+            <ul>
+                <li>SportDOG SBC-R</li>
+                <li>DogWatch BT-7</li>
+                <li>E-Collar Technologies BP-504</li>
+                <li>SportDOG SBC-6</li>
+            </ul>
+        </td>
+    </tr>
+    <tr>
+        <td>IMAGE</td>
+        <td>Great Dane</td>
+        <td>Gentle giant of the dog world! Despite their size, we have had customers find success in citronella spray
+            collars however we do recommend static electric bark collars in most situations.</td>
+        <td>
+            <ul>
+                <li>SportDOG SBC-R</li>
+                <li>Dogtra YS600</li>
+                <li>SportDOG SBC-6</li>
+            </ul>
+        </td>
+    </tr>
+    <tr>
+        <td>IMAGE</td>
+        <td>Greyhound</td>
+        <td>Increasingly popular pet dog and not a big barker generally. Depending on the dog, you may find success with
+            citronella spray collars however we do recommend static electric bark collars as well.</td>
+        <td>
+            <ul>
+                <li>SportDOG SBC-R</li>
+                <li>Dogtra YS300*</li>
+                <li>E-Collar Technologies BP-504</li>
+                <li>Petsafe Rechargeable Spray Bark Collar</li>
+            </ul>
+        </td>
+    </tr>
+    <tr>
+        <td>IMAGE</td>
+        <td>GSP</td>
+        <td>Popular hunting dog that is a bit of a barker as well. We only recommend static electric bark collars for
+            this driven breed.</td>
+        <td>
+            <ul>
+                <li>SportDOG SBC-R</li>
+                <li>Dogtra YS600</li>
+                <li>E-Collar Technologies BP-504</li>
+                <li>SportDOG SBC-6</li>
+            </ul>
+        </td>
+    </tr>
+    <tr>
+        <td>IMAGE</td>
+        <td>Hungarian Vizsla</td>
+        <td>Popular hunting dog that is gentle by nature but can have a big bark. Static electric bark collars are your
+            best solution.</td>
+        <td>
+            <ul>
+                <li>SportDOG SBC-R</li>
+                <li>Dogwatch BT-7</li>
+                <li>E-Collar Technologies BP-504</li>
+                <li>SportDOG SBC-6</li>
+            </ul>
+        </td>
+    </tr>
+    <tr>
+        <td>IMAGE</td>
+        <td>Huntaway</td>
+        <td>A New Zealand herding dog trained to herd by barking. If not trained properly, barking can be a big issue!
+            We only recommend static electric bark collars!</td>
+        <td>
+            <ul>
+                <li>SportDOG SBC-R</li>
+                <li>E-Collar Technologies BP-504</li>
+                <li>DogWatch BT-7</li>
+                <li>SportDOG SBC-6</li>
+            </ul>
+        </td>
+    </tr>
+</table>
+<script>
+function searchBreed() {
+    var input, filter, table, tr, td, i, txtValue;
+    input = document.getElementById("search-breed");
+    filter = input.value.toUpperCase();
+    table = document.getElementById("breed-table");
+    tr = table.getElementsByTagName("tr");
+    for (i = 0; i < tr.length; i++) {
+        td = tr[i].getElementsByTagName("td")[1];
+        if (td) {
+            txtValue = td.textContent || td.innerText;
+            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                tr[i].style.display = "";
+            } else {
+                tr[i].style.display = "none";
+            }
+        }
+    }
+}
+</script>

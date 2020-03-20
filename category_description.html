@@ -2,39 +2,67 @@
     .category_description {
         width: 100%;
         margin: 10px;
+        font-family: inherit;
+    }
+
+    .image_block {
+        width: 300px;
+        max-width: 50%;
     }
 
     .row_one {
-        display: inline-flex;
+        margin: 10px 10%;
+        padding: 10px;
+        background: #F9F8F3;
+        display: block;
+        box-sizing: border-box;
     }
 
     .row_one .image_block {
         float: left;
-        width: 300px;
-        height: auto;
-        max-width: 50%;
+        position: relative;
+        left: -10%;
+        box-shadow: 0 30px 70px -20px rgba(00,0,.5);
+        margin: 10px;
     }
 
     .row_one .image_block img {
         width: 100%;
+        padding-right: 10px;
     }
 
     .row_one .text_block {
-        margin: 10px;
+        display: table;
+        position: relative;
+        left: -5%;
+    }
+
+    .text_block p {
+    }
+
+    .row_two {
+        margin: 10px 10%;
         padding: 10px;
-        border-style: solid;
-        border-width: 1px;
-        border-color: black;
-        border-radius: 20px;
-        background:dimgray;
+        background: #F9F8F3;
+        display: block;
+        box-sizing: border-box;
+    }
+
+    .row_two .image_block {
+        float: right;
+        position: relative;
+    }
+
+    .row_two .image_block img {
+        width: 100%;
     }
 </style>
 <div class="category_description">
     <div class="row_one">
+        <div class="image_block">
+            <img src="Dog_fences_and_containment.jpg" alt="Dog Fences and Containment">
+        </div>
         <div class="text_block">
-            <div class="image_block">
-                <img src="Dog_fences_and_containment.jpg" alt="Dog Fences and Containment">
-            </div>
             <h5>Safe and Effective Containment Fence Systems</h5>
             <p>Electric dog fences deliver a radio signal to your dog's collar, giving them a gentle static pulse that
                 reminds them to stay within specific boundaries. Benefits of containment fence systems include:</p>
@@ -48,6 +76,9 @@
         </div>
     </div>
     <div class="row_two">
+        <div class="image_block">
+            <a href=""><img src="dog fence plan category description.jpg"></a>
+        </div>
         <div class="text_block">
             <h5>Which Containmant Fence is right for me?</h5>
             <p>The correct fence for your dog depends on a number of factors, including:</p>
@@ -57,11 +88,9 @@
                 <li>Your dog's breed, age, size and temperament</li>
             </ul>
             <p>Containment fence systems have the ability to surround small areas, such as garden beds and chook pens,
-                up to large 100 acre properties. An unlimited amount of dogs can be contained by the boundary system
+                up to large 100 acre properties.</p>
+                <p>An unlimited amount of dogs can be contained by the boundary system
                 providing they are wearing the compatible receiver collar. Suitable for dogs over 2kg and 6 months.</p>
-        </div>
-        <div class="image_block">
-            <a href=""><img src="dog fence plan category description.jpg"></a>
         </div>
     </div>
 </div>

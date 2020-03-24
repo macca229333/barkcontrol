@@ -1,7 +1,7 @@
 <style>
     @media (max-width: 767px) {
         .slideshow_container {
-            max-width: 200px;
+            max-width: 220px;
             position: relative;
             margin: auto;
         }
@@ -67,6 +67,10 @@
             animation-duration: 1.5s;
         }
 
+        .hidden-xs {
+            display: none;
+        }
+
         @-webkit-keyframes fade {
             from {
                 opacity: .4
@@ -92,40 +96,108 @@
         .slideshow_container {
             display: none;
         }
+
+        .juliusK9Images {
+            width: 220px;
+            height: 220px;
+            display: inline-block;
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+
+        .juliusK9Images img {
+            width: 100%;
+            height: 100%;
+            margin: 0px !important;
+        }
+
+        .hidden-xs {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+        }
+
+        .row {
+            width: 100%;
+        }
+
+        .row_1_text {
+            display: inline-block;
+            width: 50%;
+            margin: 10px;
+        }
+
+        .row_1 .responsive_video {
+            float: right;
+            width: 50%;
+            margin: 10px;
+        }
     }
 </style>
+
+<div class="row row_1">
+    <div class="row_1_text">
+        <h3> Standard Dog Harnesses &amp; Rehabilitation Harnesses</h3>
+        <ul>
+            <li>Harnesses available for pet dogs, working dogs, and dogs going through recovery.</li>
+            <li>Julius K9 manufactures the best dog harnesses in the world - Check out the <a
+                    href="https://www.barkcontrol.com.au/buy/k9-powerharness-w-customisable-reflective-labels/1600">IDC
+                    Powerharness</a> and <a
+                    href="https://www.barkcontrol.com.au/buy/julius-k-9-swimming-and-therapy-rehab-harness/1531920">Swimming/Therapy
+                    Harness</a></li>
+            <li>The <a href="https://www.barkcontrol.com.au/buy/gingerlead-harnesses/GGL100">GingerLead Rehabilitation Harness</a>
+                is perfect for senior dogs and dogs revovering from injuries that affect mobility.</li>
+        </ul>
+        <p>Click Read More to learn more on the dog harnesses range. Need some assistance? Please call us on <strong><a
+                    href="tel:1300668931">1300 668 931</a></strong></p>
+    </div>
+    <div class="responsive_video"><iframe src="https://www.youtube.com/embed/xJrbvS05hfE" width="400px" height="237px" frameborder="0" allowfullscreen="allowfullscreen"></iframe></div>
+</div>
+<div class="row pad20 hidden-xs">
+    <div class="juliusK9Images"><img src="{{media url=&quot;wysiwyg/1_small.jpg&quot;}}"></div>
+    <div class="juliusK9Images"><img src="{{media url=&quot;wysiwyg/2_small.jpg&quot;}}"></div>
+    <div class="juliusK9Images"><img src="{{media url=&quot;wysiwyg/3_small.jpg&quot;}}"></div>
+    <div class="juliusK9Images"><img src="{{media url=&quot;wysiwyg/4_small.jpg&quot;}}"></div>
+</div>
+<div class="row pad20 hidden-xs">
+    <div class="juliusK9Images"><img src="{{media url=&quot;wysiwyg/5_small.jpg&quot;}}"></div>
+    <div class="juliusK9Images"><img src="{{media url=&quot;wysiwyg/6_small.jpg&quot;}}"></div>
+    <div class="juliusK9Images"><img src="{{media url=&quot;wysiwyg/7_small.jpg&quot;}}"></div>
+    <div class="juliusK9Images"><img src="{{media url=&quot;wysiwyg/8_small.jpg&quot;}}"></div>
+</div>
+
 <div class="slideshow_container">
     <div class="juliusK9Slides fade">
         <div class="numbertext">1 / 8</div>
-        <img src="threeDogsinCar.jpg">
+        <img src="{{media url=&quot;wysiwyg/1_small.jpg&quot;}}">
     </div>
     <div class="juliusK9Slides fade">
         <div class="numbertext">2 / 8</div>
-        <img src="FrenchBulldog.jpg">
+        <img src="{{media url=&quot;wysiwyg/2_small.jpg&quot;}}">
     </div>
     <div class="juliusK9Slides fade">
         <div class="numbertext">3 / 8</div>
-        <img src="purpleHarness.jpg">
+        <img src="{{media url=&quot;wysiwyg/3_small.jpg&quot;}}">
     </div>
     <div class="juliusK9Slides fade">
         <div class="numbertext">4 / 8</div>
-        <img src="neoninWater.jpg">
+        <img src="{{media url=&quot;wysiwyg/4_small.jpg&quot;}}">
     </div>
     <div class="juliusK9Slides fade">
         <div class="numbertext">5 / 8</div>
-        <img src="militaryDog.jpg">
+        <img src="{{media url=&quot;wysiwyg/5_small.jpg&quot;}}">
     </div>
     <div class="juliusK9Slides fade">
         <div class="numbertext">6 / 8</div>
-        <img src="threeBeagles.jpg">
+        <img src="{{media url=&quot;wysiwyg/6_small.jpg&quot;}}">
     </div>
     <div class="juliusK9Slides fade">
         <div class="numbertext">7 / 8</div>
-        <img src="doginForest.jpg">
+        <img src="{{media url=&quot;wysiwyg/7_small.jpg&quot;}}">
     </div>
     <div class="juliusK9Slides fade">
         <div class="numbertext">8 / 8</div>
-        <img src="yeloowHarness.jpg">
+        <img src="{{media url=&quot;wysiwyg/8_small.jpg&quot;}}">
     </div>
     <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
     <a class="next" onclick="plusSlides(1)">&#10095;</a>

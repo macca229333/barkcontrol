@@ -1,5 +1,5 @@
 <style>
-    @media (max-width: 767px) {
+    @media (max-width: 991px) {
         .slideshow_container {
             max-width: 220px;
             position: relative;
@@ -67,8 +67,29 @@
             animation-duration: 1.5s;
         }
 
-        .hidden-xs {
-            display: none;
+        .hidden_xs {
+            display: none !important;
+        }
+        
+        .row_1_text {
+            display: inline-block;
+            width: 100%;
+            margin: 10px;
+        }
+
+        .responsive_video {
+            position: relative;
+            padding-bottom: 56.25%;
+            padding-top: 30px;
+            overflow: hidden;
+        }
+
+        .responsive_video iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
         }
 
         @-webkit-keyframes fade {
@@ -92,7 +113,7 @@
         }
     }
 
-    @media (min-width: 768px) {
+    @media (min-width: 992px) {
         .slideshow_container {
             display: none;
         }
@@ -111,31 +132,32 @@
             margin: 0px !important;
         }
 
-        .hidden-xs {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-evenly;
+        .row_1 .responsive_video {
+            float: right;
+            width: 45%;
+            margin: 10px;
         }
 
-        .row {
-            width: 100%;
-        }
-
+        
         .row_1_text {
             display: inline-block;
             width: 50%;
             margin: 10px;
         }
 
-        .row_1 .responsive_video {
-            float: right;
-            width: 50%;
-            margin: 10px;
+        .row_2 {
+            width: 100%;
         }
     }
+/* All media sizes */
+    .row_1 {
+        width: 100%;
+        padding: 10px;
+    }
+
 </style>
 
-<div class="row row_1">
+<div class="row_1">
     <div class="row_1_text">
         <h3> Standard Dog Harnesses &amp; Rehabilitation Harnesses</h3>
         <ul>
@@ -153,13 +175,13 @@
     </div>
     <div class="responsive_video"><iframe src="https://www.youtube.com/embed/xJrbvS05hfE" width="400px" height="237px" frameborder="0" allowfullscreen="allowfullscreen"></iframe></div>
 </div>
-<div class="row pad20 hidden-xs">
+<div class="row_2 pad20 hidden_xs">
     <div class="juliusK9Images"><img src="{{media url=&quot;wysiwyg/1_small.jpg&quot;}}"></div>
     <div class="juliusK9Images"><img src="{{media url=&quot;wysiwyg/2_small.jpg&quot;}}"></div>
     <div class="juliusK9Images"><img src="{{media url=&quot;wysiwyg/3_small.jpg&quot;}}"></div>
     <div class="juliusK9Images"><img src="{{media url=&quot;wysiwyg/4_small.jpg&quot;}}"></div>
 </div>
-<div class="row pad20 hidden-xs">
+<div class="row_3 pad20 hidden_xs">
     <div class="juliusK9Images"><img src="{{media url=&quot;wysiwyg/5_small.jpg&quot;}}"></div>
     <div class="juliusK9Images"><img src="{{media url=&quot;wysiwyg/6_small.jpg&quot;}}"></div>
     <div class="juliusK9Images"><img src="{{media url=&quot;wysiwyg/7_small.jpg&quot;}}"></div>
@@ -214,30 +236,18 @@
 </div>
 
 <script>
-    var slideIndex = 1;
-    showSlides(slideIndex);
+    var slideIndex = 0;
+    showSlides();
 
-    function plusSlides(n) {
-        showSlides(slideIndex += n);
-    }
-
-    function currentSlides(n) {
-        showSlides(slideIndex = n);
-    }
-
-    function showSlides(n) {
+    function showSlides() {
         var i;
-        var slides = document.getElementsByClassName("juliusK9Slides");
-        var dots = document.getElementsByClassName("dot");
-        if (n > slides.length) {slideIndex = 1}
-        if (n < 1) {slideIndex = slides.length}
+        var slides = document.getElementsByClassName("mySlides");
         for (i = 0; i < slides.length; i++) {
             slides[i].style.display = "none";
         }
-        for (i = 0; i < dots.length; i++) {
-            dots[i].className = dots[i].className.replace(" active", "");
-        }
-        slides[slideIndex-1].style.display = "block";
-        dots[slideIndex-1].className += " active";
+        slideIndex++;
+        if (slideIndex > slides.length) { slideIndex = 1 }
+        slides[slideIndex - 1].style.display = "block";
+        setTimeout(showSlides, 2000);
     }
 </script>

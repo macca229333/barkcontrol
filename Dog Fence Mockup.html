@@ -20,6 +20,10 @@
             bottom: -10%;
         }
 
+        .roundedImage {
+            border-radius: 15px;
+        }
+
         .textBorder {
             border-radius: 15px;
             background-color: #ffffff;
@@ -52,13 +56,77 @@
         .category-description img {
             margin-top: 0px !important;
         }
+
+        .categoryDescriptionMobile {
+            display: none;
+        }
+    }
+
+    @media (max-width: 769px) {
+        .categoryDescriptionDesktop {
+            display: none;
+        }
+
+        .block_1, .block_2, .block_3 {
+            width: 100%;
+            display: inline-flex;
+            justify-content: center;
+        }
     }
 </style>
 <div class="categoryDescriptionDesktop">
     <div class="row_1">
         <div class="block_1">
             <div class="imageContainer">
-                <img src="{{media url=&quot;wysiwyg/dognearboundaryflags.png&quot;}}" width="311" height="177">
+                <a href ="https://www.youtube.com/watch?v=saLCX0_GKoE" target="_blank"><img class="roundedImage" src="{{media url=&quot;wysiwyg/how-a-dog-fence-works.jpg&quot;}}" width="311" height="177"></a>
+            </div>
+            <div class="textBorder">
+                <div class="textContainer">
+                    <h3>Dog Fence Basics</h3>
+                    <ul>
+                        <li>Want to know how a dog containment system works? Watch our short video to learn the basics now!</li>
+                        <li>We have dog fence systems for dogs of all sizes and types to suit any type of property.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="block_2">
+            <div class="imageContainer">
+                <img src="{{media url=&quot;wysiwyg/threedogsongrass.png&quot;}}" width="311" height="177">
+            </div>
+            <div class="textBorder">
+                <div class="textContainer">
+                    <h3>Find the Right Fence</h3>
+                    <ul>
+                        <li>Use our filters to narrow down the best electric dog fence for you.</li>
+                        <li>Use our <a href="https://www.barkcontrol.com.au/view/1044">Customized Dog Fence Plan</a> and let us do the work.</li>
+                        <li>Call us! Our experts are here to help.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="block_3">
+            <div class="imageContainer">
+                <img src="{{media url=&quot;wysiwyg/blacklab.png&quot;}}" width="311" height="177">
+            </div>
+            <div class="textBorder">
+                <div class="textContainer">
+                    <h3>Why Buy From Us</h3>
+                    <ul>
+                        <li>We have the safest dog fence systems in Australia</li>
+                        <li>No cheap, unreliable systems. 3-year Warranties!</li>
+                        <li>Deal with our real dog fence experts</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="categoryDescriptionMobile">
+    <div class="row_1">
+        <div class="block_1">
+            <div class="imageContainer">
+                <a href ="https://www.youtube.com/watch?v=saLCX0_GKoE" target="_blank"><img class="roundedImage" src="{{media url=&quot;wysiwyg/how-a-dog-fence-works.jpg&quot;}}" width="311" height="177"></a>
             </div>
             <div class="textBorder">
                 <div class="textContainer">

@@ -1,5 +1,5 @@
 <style>
-    @media (min-width: 992px) {
+    @media (min-width: 1380px) {
         .row_1 {
             display: flex;
             width: 100%;
@@ -10,6 +10,7 @@
 
         .block_1, .block_2, .block_3 {
             display: inline-block;
+            margin-top: -30px;
         }
 
         .imageContainer {
@@ -19,7 +20,7 @@
             bottom: -10%;
         }
 
-        .textContainer {
+        .textBorder {
             border-radius: 15px;
             background-color: #ffffff;
             box-shadow: 0px 1px 3.8px 0.2px rgba(19, 19, 19, 0.45);
@@ -29,12 +30,27 @@
             
         }
 
-        .textContainer h3, .textContainer ul, .textContainer p {
+        .textBorder h3, .textBorder ul, .textBorder p {
             font-family: inherit;
         }
 
-        .textContainer h3 {
+        .textBorder h3 {
             text-align: center;
+            margin: 10px 0px 0px 0px !important;
+        }
+
+        .textContainer {
+            height: fit-content;
+            padding-top: 30px;
+        }
+
+        .textContainer a {
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .category-description img {
+            margin-top: 0px !important;
         }
     }
 </style>
@@ -42,40 +58,46 @@
     <div class="row_1">
         <div class="block_1">
             <div class="imageContainer">
-                <img src="dognearboundaryflags.png">
+                <img src="{{media url=&quot;wysiwyg/dognearboundaryflags.png&quot;}}" width="311" height="177">
             </div>
-            <div class="textContainer">
-                <h3>Dog Fence Basics</h3>
-                <ul>
-                    <li>Want to know how a dog containment system works? Watch our short video to learn the basics now!</li>
-                    <li>We have dog fence systems for dogs of all sizes and types to suit any type of property.</li>
-                </ul>
+            <div class="textBorder">
+                <div class="textContainer">
+                    <h3>Dog Fence Basics</h3>
+                    <ul>
+                        <li>Want to know how a dog containment system works? Watch our short video to learn the basics now!</li>
+                        <li>We have dog fence systems for dogs of all sizes and types to suit any type of property.</li>
+                    </ul>
+                </div>
             </div>
         </div>
         <div class="block_2">
             <div class="imageContainer">
-                <img src="threedogsongrass.png">
+                <img src="{{media url=&quot;wysiwyg/threedogsongrass.png&quot;}}" width="311" height="177">
             </div>
-            <div class="textContainer">
-                <h3>Find the Right Fence</h3>
-                <ul>
-                    <li>Use our filters to narrow down the best electric dog fence for you.</li>
-                    <li>Use our <a href="">Customized Dog Fence Plan</a> and let us do the work.</li>
-                    <li>Call us! Our experts are here to help.</li>
-                </ul>
+            <div class="textBorder">
+                <div class="textContainer">
+                    <h3>Find the Right Fence</h3>
+                    <ul>
+                        <li>Use our filters to narrow down the best electric dog fence for you.</li>
+                        <li>Use our <a href="https://www.barkcontrol.com.au/view/1044">Customized Dog Fence Plan</a> and let us do the work.</li>
+                        <li>Call us! Our experts are here to help.</li>
+                    </ul>
+                </div>
             </div>
         </div>
         <div class="block_3">
             <div class="imageContainer">
-                <img src="blacklab.png">
+                <img src="{{media url=&quot;wysiwyg/blacklab.png&quot;}}" width="311" height="177">
             </div>
-            <div class="textContainer">
-                <h3>Why Buy From Us</h3>
-                <ul>
-                    <li>We have the safest dog fence systems in Australia</li>
-                    <li>No cheap, unreliable systems. 3-year Warranties!</li>
-                    <li>Deal with our real dog fence experts</li>
-                </ul>
+            <div class="textBorder">
+                <div class="textContainer">
+                    <h3>Why Buy From Us</h3>
+                    <ul>
+                        <li>We have the safest dog fence systems in Australia</li>
+                        <li>No cheap, unreliable systems. 3-year Warranties!</li>
+                        <li>Deal with our real dog fence experts</li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>

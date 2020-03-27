@@ -70,27 +70,14 @@
         .block_1, .block_2, .block_3 {
             width: 100%;
             display: block;
-            padding: 0px;
-        }
-
-        .block_1 {
-            padding-top: 10px;
-        }
-
-        .block_1 .textBorder {
-            background-color: #F9F8F3;
-        }
-
-        .block_2 .textBorder {
-            background-color: #D2DFFF;
-        }
-
-        .block_3 .textBorder {
-            background-color: #f9f8f3;
+            padding: 5px 10px;
         }
 
         .textBorder {
             width: 100%;
+            border-radius: 15px;
+            background-color: #ffffff;
+            box-shadow: 0px 1px 3.8px 0.2px rgba(19, 19, 19, 0.45);
         }
 
         .textBorder h3 {
@@ -98,7 +85,7 @@
             padding-top: 10px;
         }
 
-        .category-description img {
+        .category-description iframe {
             margin-top: 0px !important;
             display: block;
             margin-right: auto;
@@ -111,6 +98,7 @@
 
         .imageContainer {
             width: 100%;
+            margin-bottom: 10px;
         }
     }
 </style>
@@ -166,7 +154,7 @@
     <div class="row_1">
         <div class="block_1">
             <div class="imageContainer">
-                <a href ="https://www.youtube.com/watch?v=saLCX0_GKoE" target="_blank"><img class="roundedImage" src="{{media url=&quot;wysiwyg/how-a-dog-fence-works.jpg&quot;}}" width="311" height="177"></a>
+                <iframe class="roundedImage" width="311" height="177" src="https://www.youtube.com/embed/saLCX0_GKoE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
             <div class="textBorder">
                 <div class="textContainer">
@@ -190,7 +178,7 @@
                 </div>
             </div>
         </div>
-        <div class="block_3">
+        <div class="block_3 pad20">
             <div class="textBorder">
                 <div class="textContainer">
                     <h3>Why Buy From Us</h3>

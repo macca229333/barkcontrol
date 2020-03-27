@@ -69,8 +69,48 @@
 
         .block_1, .block_2, .block_3 {
             width: 100%;
-            display: inline-flex;
-            justify-content: center;
+            display: block;
+            padding: 0px;
+        }
+
+        .block_1 {
+            padding-top: 10px;
+        }
+
+        .block_1 .textBorder {
+            background-color: #F9F8F3;
+        }
+
+        .block_2 .textBorder {
+            background-color: #D2DFFF;
+        }
+
+        .block_3 .textBorder {
+            background-color: #f9f8f3;
+        }
+
+        .textBorder {
+            width: 100%;
+        }
+
+        .textBorder h3 {
+            text-align: center;
+            padding-top: 10px;
+        }
+
+        .category-description img {
+            margin-top: 0px !important;
+            display: block;
+            margin-right: auto;
+            margin-left: auto;
+        }
+
+        .roundedImage {
+            border-radius: 15px;
+        }
+
+        .imageContainer {
+            width: 100%;
         }
     }
 </style>
@@ -139,9 +179,6 @@
             </div>
         </div>
         <div class="block_2">
-            <div class="imageContainer">
-                <img src="{{media url=&quot;wysiwyg/threedogsongrass.png&quot;}}" width="311" height="177">
-            </div>
             <div class="textBorder">
                 <div class="textContainer">
                     <h3>Find the Right Fence</h3>
@@ -154,9 +191,6 @@
             </div>
         </div>
         <div class="block_3">
-            <div class="imageContainer">
-                <img src="{{media url=&quot;wysiwyg/blacklab.png&quot;}}" width="311" height="177">
-            </div>
             <div class="textBorder">
                 <div class="textContainer">
                     <h3>Why Buy From Us</h3>

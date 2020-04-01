@@ -4,29 +4,56 @@
         .borderBox {
             background-color: #f6f6f6;
             border-radius: 15px;
+            margin: 70px 30px 10px 30px;
 
+        }
+
+        .topSection {
+            display: flex;
+            justify-content: center;
+            position: relative;
+            top: -70px;
         }
 
         .bottomSection {
             display: inline-flex;
+        }
+
+        .mainText {
+            width: 33%;
+            text-align: center;
+        }
+
+        .headingImage {
+            display: block;
+            margin-left: auto !important;
+            margin-right: auto !important;
+        }
+
+        .headingText {
+            text-align: center;
+        }
+
+        .category-description img {
+            margin-top: 0px !important;
         }
     }
 </style>
 <div class="categoryDescriptionDesktop pad20">
     <div class="borderBox">
         <div class="topSection">
-            <div class="imageContainer">
-                <img src="Lab with flags.png">
-            </div>
-            <div class="headingText">
-                <h3>Do Electric Dog Fences Really Work?</h3>
-                <p>Yes, an electric dog fence or dog containment system will work...if you:</p>
+            <div class="headingImageContainer">
+                <img class="headingImage" src="{{media url=&quot;wysiwyg/Lab_with_flags.png&quot;}}" alt="" />
+                <div class="headingText">
+                    <h3>Do Electric Dog Fences Really Work?</h3>
+                    <p>Yes, an electric dog fence or dog containment system will work...if you:</p>
+                </div>
             </div>
         </div>
         <div class="bottomSection">
             <div class="mainText">
                 <div class="logoContainer">
-                    <img src="tickLogo.png">
+                    <img src="{{media url=&quot;wysiwyg/tickLogo.png&quot;}}" alt="" />
                 </div>
                 <h5>Buy a quality Hidden Dog Fence</h5>
                 <p>We receive several calls a day from people who buy 'cheap' systems that zap your dog anywhere in the
@@ -36,7 +63,7 @@
             </div>
             <div class="mainText">
                 <div class="logoContainer">
-                    <img src="tickLogo.png">
+                    <img src="{{media url=&quot;wysiwyg/tickLogo.png&quot;}}" alt="" />
                 </div>
                 <h5>Purchase the Right System to Suit your Dog and your Property</h5>
                 <p>Don't hesitate to call and let our dog containment experts help, or use our Personalised Dog Fence
@@ -44,7 +71,7 @@
             </div>
             <div class="mainText">
                 <div class="logoContainer">
-                    <img src="tickLogo.png">
+                    <img src="{{media url=&quot;wysiwyg/tickLogo.png&quot;}}" alt="" />
                 </div>
                 <h5>Do the Training!</h5>
                 <p>This is the last step. It would be unfair to expect your dog to 'figure it out for themselves'.</p>

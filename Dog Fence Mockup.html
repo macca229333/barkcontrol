@@ -1,5 +1,5 @@
 <style>
-    @media (min-width: 1380px) {
+    @media (min-width: 992px) {
         .row_1 {
             display: flex;
             width: 100%;
@@ -13,6 +13,7 @@
         .block_3 {
             display: inline-block;
             margin-top: -30px;
+            max-width: 30%;
         }
 
         .imageContainer {
@@ -30,7 +31,7 @@
             border-radius: 15px;
             background-color: #ffffff;
             box-shadow: 0px 1px 3.8px 0.2px rgba(19, 19, 19, 0.45);
-            width: 411px;
+            width: 100%;
             height: 215px;
             padding: 10px;
 
@@ -113,7 +114,7 @@
         }
     }
 
-    @media (max-width: 768px) {
+    @media (max-width: 991px) {
         .categoryDescriptionDesktop {
             display: none;
         }
@@ -173,10 +174,14 @@
             display: block;
             margin-left: auto !important;
             margin-right: auto !important;
+            max-width: 50%;
+            min-width: 200px
         }
 
         .headingText {
             text-align: center;
+            margin-left: 10px;
+            margin-right: 10px;
         }
 
         .headingText h2 {
@@ -210,10 +215,16 @@
         }
     }
 
-    @media (min-width: 769px) and (max-width: 1380px) {
+    @media (min-width: 992px) and (max-width: 1380px) {
+        .textBorder {
+            height: 300px;
+        }
+    }
 
-        .categoryDescriptionMobile {
-            display: none;
+    @media (min-width: 992px) and (max-width: 1024px){
+        .roundedImage {
+            max-width: 100%;
+            height: 161px;
         }
     }
 </style>
@@ -270,52 +281,6 @@
     </div>
 </div>
 <div class="categoryDescriptionMobile">
-    <div class="row_1">
-        <div class="block_1">
-            <div class="imageContainer">
-                <iframe class="roundedImage" width="311" height="177" src="https://www.youtube.com/embed/saLCX0_GKoE"
-                    frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen></iframe>
-            </div>
-            <div class="textBorder">
-                <div class="textContainer">
-                    <h3>Dog Fence Basics</h3>
-                    <ul>
-                        <li>Want to know how a dog containment system works? Watch our short video to learn the basics
-                            now!</li>
-                        <li>We have dog fence systems for dogs of all sizes and types to suit any type of property.</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="block_2">
-            <div class="textBorder">
-                <div class="textContainer">
-                    <h3>Find the Right Fence</h3>
-                    <ul>
-                        <li>Use our filters to narrow down the best electric dog fence for you.</li>
-                        <li>Use our <a href="https://www.barkcontrol.com.au/view/1044">Customized Dog Fence Plan</a> and
-                            let us do the work.</li>
-                        <li>Call us! Our experts are here to help.</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="block_3 pad20">
-            <div class="textBorder">
-                <div class="textContainer">
-                    <h3>Why Buy From Us</h3>
-                    <ul>
-                        <li>We have the safest and most reliable hidden dog fence systems in Australia</li>
-                        <li>No cheap, unreliable systems. 3-year Warranties!</li>
-                        <li>Real Electric Dog Fence Experts (Yes in Australia!) are here to help.</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="categoryDescriptionTablet">
     <div class="row_1">
         <div class="block_1">
             <div class="imageContainer">

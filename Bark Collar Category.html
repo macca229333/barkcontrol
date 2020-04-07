@@ -1,0 +1,436 @@
+<style>
+    @media (min-width: 992px) {
+        .row_1 {
+            display: flex;
+            width: 100%;
+            padding: 10px;
+            overflow-x: auto;
+        }
+
+        .block_1,
+        .block_2,
+        .block_3 {
+            display: inline-block;
+            margin-top: -30px;
+            max-width: 30%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .imageContainer {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            bottom: -10%;
+        }
+
+        .roundedImage {
+            border-radius: 15px;
+        }
+
+        .textBorder {
+            border-radius: 15px;
+            background-color: #ffffff;
+            box-shadow: 0px 1px 3.8px 0.2px rgba(19, 19, 19, 0.45);
+            width: 100%;
+            height: 215px;
+            padding: 10px;
+
+        }
+
+        .textBorder h3,
+        .textBorder ul,
+        .textBorder p {
+            font-family: inherit;
+        }
+
+        .textBorder h3 {
+            text-align: center;
+            margin: 10px 0px 0px 0px !important;
+        }
+
+        .textContainer {
+            height: fit-content;
+            padding-top: 30px;
+        }
+
+        .textContainer a {
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .category-description img {
+            margin-top: 0px !important;
+        }
+
+        .categoryDescriptionMobile {
+            display: none;
+        }
+
+        .categoryDescriptionTablet {
+            display: none;
+        }
+
+        .borderBox {
+            background-color: #f6f6f6;
+            border-radius: 15px;
+            margin: 100px 30px 10px 30px;
+        }
+
+        .topSection {
+            display: flex;
+            justify-content: center;
+            position: relative;
+            top: -70px;
+        }
+
+        .bottomSection {
+            display: inline-flex;
+            position: relative;
+            top: -45px;
+        }
+
+        .mainText {
+            width: 33%;
+            text-align: center;
+            margin: 0px 15px 0px 15px;
+        }
+
+        .mainText h4 {
+            font-size: 16px;
+        }
+
+        .headingImage {
+            display: block;
+            margin-left: auto !important;
+            margin-right: auto !important;
+        }
+
+        .headingText {
+            text-align: center;
+        }
+
+        .headingText h2 {
+            font-weight: 700 !important;
+            font-size: xx-large;
+        }
+
+        .headingText p {
+            font-size: large;
+            font-weight: 600;
+        }
+
+        .logoContainer {
+            padding-bottom: 10px;
+        }
+
+        .logoContainer img {
+            width: auto;
+            height: 50px;
+        }
+    }
+
+    @media (max-width: 991px) {
+        .categoryDescriptionDesktop {
+            display: none;
+        }
+
+        .block_1,
+        .block_2,
+        .block_3 {
+            width: 100%;
+            display: block;
+            padding: 5px 10px;
+        }
+
+        .textBorder {
+            width: 100%;
+            border-radius: 15px;
+            background-color: #ffffff;
+            box-shadow: 0px 1px 3.8px 0.2px rgba(19, 19, 19, 0.45);
+        }
+
+        .textBorder h3 {
+            text-align: center;
+            padding-top: 10px;
+        }
+
+        .category-description iframe {
+            margin-top: 0px !important;
+            display: block;
+            margin-right: auto;
+            margin-left: auto;
+        }
+
+        .category-description img {
+            margin-top: 0px !important;
+        }
+
+        .roundedImage {
+            border-radius: 15px;
+            max-width: 100%;
+        }
+
+        .imageContainer {
+            width: 100%;
+            margin-bottom: 10px;
+        }
+
+        .borderBox {
+            background-color: #f6f6f6;
+            border-radius: 15px;
+            margin: 100px 15px 10px 15px;
+        }
+
+        .headingImage {
+            display: block;
+            margin-left: auto !important;
+            margin-right: auto !important;
+            max-width: 50%;
+            min-width: 200px
+        }
+
+        .headingText {
+            text-align: center;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+
+        .headingText h2 {
+            font-weight: 700 !important;
+            margin-top: 5px;
+        }
+
+        .logoContainer {
+            padding-bottom: 10px;
+        }
+
+        .logoContainer img {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            max-width: fit-content;
+            width: auto;
+            height: 50px;
+        }
+
+        .mainText {
+            text-align: center;
+            margin: 0px 15px 0px 15px;
+        }
+
+        .topSection {
+            position: relative;
+            top: -70px;
+        }
+
+        .bottomSection {
+            position: relative;
+            top: -45px;
+        }
+    }
+
+    @media (min-width: 992px) and (max-width: 1380px) {
+        .textBorder {
+            height: 300px;
+        }
+    }
+
+    @media (min-width: 992px) and (max-width: 1024px) {
+        .roundedImage {
+            max-width: 100%;
+            height: 161px;
+        }
+    }
+</style>
+<div class="categoryDescriptionDesktop">
+    <div class="row_1">
+        <div class="block_1">
+            <div class="imageContainer">
+                <iframe class="roundedImage" width="311" height="177" src="https://www.youtube.com/embed/saLCX0_GKoE"
+                    frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            </div>
+            <div class="textBorder">
+                <div class="textContainer">
+                    <h3>Bark Collar Basics</h3>
+                    <ul>
+                        <li>We Have Australia’s safest and most reliable barking collars including static, citronella,
+                            vibration and ultrasonic models.</li>
+                        <li>Our anti-barking collars and devices are suitable for dogs from 2.5kg to the largest most
+                            stubborn breeds.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="block_2">
+            <div class="imageContainer">
+                <img src="{{media url=&quot;wysiwyg/threedogsongrass.png&quot;}}" width="311" height="177">
+            </div>
+            <div class="textBorder">
+                <div class="textContainer">
+                    <h3>Find the Right Anti-Bark Collar</h3>
+                    <ul>
+                        <li>You can use the product filters to narrow down the best collar option.</li>
+                        <li>Check out our Bark Collar By Breed guide.</li>
+                        <li>Call or Email and let our experts do the work for you.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="block_3">
+            <div class="imageContainer">
+                <img src="{{media url=&quot;wysiwyg/blacklab.png&quot;}}" width="311" height="177">
+            </div>
+            <div class="textBorder">
+                <div class="textContainer">
+                    <h3>Why Buy From Us</h3>
+                    <ul>
+                        <li>We do not sell cheap, unsafe bark collars period!</li>
+                        <li>We do not sell one brand. We are totally independent and only care about getting you the
+                            best collar.</li>
+                        <li>You are dealing with Australia’s true barking collar experts.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="categoryDescriptionMobile">
+    <div class="row_1">
+        <div class="block_1">
+            <div class="imageContainer">
+                <iframe class="roundedImage" width="311" height="177" src="https://www.youtube.com/embed/saLCX0_GKoE"
+                    frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            </div>
+            <div class="textBorder">
+                <div class="textContainer">
+                    <h3>Bark Collar Basics</h3>
+                    <ul>
+                        <li>We Have Australia’s safest and most reliable barking collars including static, citronella,
+                            vibration and ultrasonic models.</li>
+                        <li>Our anti-barking collars and devices are suitable for dogs from 2.5kg to the largest most
+                            stubborn breeds.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="block_2">
+            <div class="textBorder">
+                <div class="textContainer">
+                    <h3>Find the Right Anti-Bark Collar</h3>
+                    <ul>
+                        <li>You can use the product filters to narrow down the best collar option.</li>
+                        <li>Check out our Bark Collar By Breed guide.</li>
+                        <li>Call or Email and let our experts do the work for you.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="block_3 pad20">
+            <div class="textBorder">
+                <div class="textContainer">
+                    <h3>Why Buy From Us</h3>
+                    <ul>
+                        <li>We do not sell cheap, unsafe bark collars period!</li>
+                        <li>We do not sell one brand. We are totally independent and only care about getting you the
+                            best collar.</li>
+                        <li>You are dealing with Australia’s true barking collar experts.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="categoryDescriptionDesktop pad20">
+    <div class="borderBox">
+        <div class="topSection">
+            <div class="headingImageContainer">
+                <img class="headingImage" src="{{media url=&quot;wysiwyg/Lab_with_flags.png&quot;}}" alt="" />
+                <div class="headingText">
+                    <h2>Do Anti Bark Collars Really Work?</h2>
+                    <p>Absolutely! However there are many types of dog barking collars. Consider this:</p>
+                </div>
+            </div>
+        </div>
+        <div class="bottomSection">
+            <div class="mainText">
+                <div class="logoContainer">
+                    <img src="{{media url=&quot;wysiwyg/ribbon-icon_4x.png&quot;}}" alt="" />
+                </div>
+                <h4>Buy a Quality Dog Bark Collar</h4>
+                <p>We only buy our bark collars from reputable brands that thoroughly test their collars for safety and
+                    to ensure they are effective to stop dog barking.<strong>Don't risk your dog's welfare with an
+                        unsafe anti-bark collar</strong></p>
+                <p>We are so confident our bark collars will work we offer performance guarantees. If it does not work
+                    send it back!</p>
+            </div>
+            <div class="mainText">
+                <div class="logoContainer">
+                    <img src="{{media url=&quot;wysiwyg/dog-and-house_4x.png&quot;}}" alt="" />
+                </div>
+                <h4>Choose the right Bark Collar to Match Your Dog</h4>
+                <p>What breed of dog you have and what is causing your dog to bark are just some of the factors that
+                    will determine the right bark collar for you. The right barking collar for your Maltese is not the
+                    same for your German Shepherd!</p>
+                <p>Use our Bark Collar by Breed guide to help find the right no-bark collar or simply contact us and let
+                    one of our experts assist you.</p>
+            </div>
+            <div class="mainText">
+                <div class="logoContainer">
+                    <img src="{{media url=&quot;wysiwyg/dribbon-icon_4x.png&quot;}}" alt="" />
+                </div>
+                <h4>Achieve Bark Collar Success!</h4>
+                <p>This is what you want, right? </p>
+                <p>Once you get your barking collar fitted correctly and use the it consistently we guarantee you will
+                    get results fast! Some even get to stop using the collar after time.</p>
+                <p>Our Bark Collar Success Guide will be sent to you after purchase to further help get you introduce your bark collar to your dog</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="categoryDescriptionDesktop pad20">
+    <div class="borderBox">
+        <div class="topSection">
+            <div class="headingImageContainer">
+                <img class="headingImage" src="{{media url=&quot;wysiwyg/Lab_with_flags.png&quot;}}" alt="" />
+                <div class="headingText">
+                    <h2>Is a Hidden Dog Fence Easy to Set Up?</h2>
+                    <p>Absolutely! Follow these recommendations:</p>
+                </div>
+            </div>
+        </div>
+        <div class="bottomSection">
+            <div class="mainText">
+                <div class="logoContainer">
+                    <img src="{{media url=&quot;wysiwyg/planning-icon_4x.png&quot;}}" alt="" />
+                </div>
+                <h4>Planning is Essential</h4>
+                <p>Draw out your yard and work out the best/easiest way to run your wire to form your new containment
+                    area. Simple is better and use existing fencing wherever possible.</p>
+                <p>You do not need to bury the wire! With an electric dog fence system, attaching to existing fences
+                    with cable ties or U-shaped nails is fine.</p>
+            </div>
+            <div class="mainText">
+                <div class="logoContainer">
+                    <img src="{{media url=&quot;wysiwyg/house-and-fence_4x.png&quot;}}" alt="" />
+                </div>
+                <h4>Complete a Loop</h4>
+                <p>You need to run the wire from your transmitter and get back to it again (a loop). There are lots of
+                    ways to do this that suits a variety of different scenarios for every yard or property.</p>
+                <p>Click here to see various ways to complete a loop. There are videos too!</p>
+            </div>
+            <div class="mainText">
+                <div class="logoContainer">
+                    <img src="{{media url=&quot;wysiwyg/question-mark_4x.png&quot;}}" alt="" />
+                </div>
+                <h4>Still can't see how a dog containment system will work on your property?</h4>
+                <p>Our electric dog fence experts are here to work that out for you. With our experience there are often
+                    ways to run your loop that you might not see.</p>
+                <p>Contact us. We are happy to go over diagrams and maps and work it out for you!
+                </p>
+            </div>
+        </div>
+    </div>
+</div>

@@ -2,26 +2,57 @@
 
     .row_1 {
         width: 100%;
-        display: block;
+        display: flex;
+        padding-top: 100px;
+    }
+
+    .row_2 {
+        height: 100px;
     }
 
     .textBorder {
+        display: flex;
+        width: 100%;
+        max-height: 250px;
         border-radius: 10px;
         background-color: rgb(226, 238, 254);
     }
 
     .textArea {
-        width: 75%;
+        width: 50%;
+        height: 250px;
+        margin-left: 30px;
+        margin-top: 15px;
     }
 
     .imageContainer {
-        width: 311px;
-        max-width: 25%;
+        width: 50%;
+        z-index: 1;
+        height: 330px;
+        position: relative;
+        top: -17%;
     }
 
     .roundedImage {
+        display: block;
+        margin-left: auto !important;
+        margin-right: auto !important;
         border-radius: 15px;
+        margin-top: 0 !important;
 
+    }
+
+    .textArea li {
+        margin-bottom: 0 !important;
+    }
+
+    .textArea h1 {
+        margin-bottom: 0 !important;
+        font-weight: 700 !important;
+    }
+
+    .textArea p {
+        margin-bottom: 0 !important;
     }
 
 </style>
@@ -29,7 +60,7 @@
     <div class="textBorder">
         <div class="textArea">
             <h1>Indoor Pet Barriers</h1>
-            <p>Indoor barrier zones are an effective solution for keeping your pets away from certain areas arounf the
+            <p>Indoor barrier zones are an effective solution for keeping your pets away from certain areas around the
                 house. Benefits of indoor containment zones include:</p>
             <ul>
                 <li>Keeps pets off furniture and benches</li>
@@ -39,8 +70,11 @@
                 <li>Suitable for dogs and cats</li>
             </ul>
         </div>
+        <div class="imageContainer">
+            <img class="roundedImage" src="{{media url=&quot;wysiwyg/dogs-indoors.jpg&quot;}}" alt="" />
+        </div>
     </div>
-    <div class="imageContainer">
-        <img class="roundedImage" src="{{media url=&quot;wysiwyg/dogs-indoors.jpg&quot;}}" alt="" />
-    </div>
+</div>
+<div class="row_2">
+    <!-- Left Blank -->
 </div>

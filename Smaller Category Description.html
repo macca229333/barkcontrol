@@ -1,9 +1,9 @@
 <style>
-
     .row_1 {
         width: 100%;
         display: flex;
-        padding-top: 100px;
+        padding-top: 0px !important;
+        margin-bottom: 50px;
     }
 
     .row_2 {
@@ -13,7 +13,7 @@
     .textBorder {
         display: flex;
         width: 100%;
-        max-height: 250px;
+        max-height: 300px;
         border-radius: 10px;
         background-color: rgb(226, 238, 254);
         border-style: solid;
@@ -27,17 +27,19 @@
         margin-left: 30px;
         margin-top: 15px;
         font-family: inherit;
+        font-size: 16px;
     }
 
     .imageContainer {
-        width: 33%;
+        width: 40%;
         z-index: 1;
-        height: 330px;
+        height: 350px;
         position: relative;
-        top: -17%;
+        top: -10%;
     }
 
     .roundedImage {
+        width: 95%;
         display: block;
         margin-left: auto !important;
         margin-right: auto !important;
@@ -60,6 +62,94 @@
         margin-bottom: 0 !important;
     }
 
+    .category-description {
+        border: none !important;
+    }
+
+    .page-title {
+        display: none !important;
+    }
+
+    @media (min-width: 1170px) and (max-width: 1379px) {
+        .imageContainer {
+            top: -3%;
+        }
+    }
+
+    @media (min-width: 992px) and (max-width: 1169px) {
+        .textBorder {
+            display: flex;
+            width: 100%;
+            max-height: 245px;
+            border-radius: 10px;
+            background-color: rgb(226, 238, 254);
+            border-style: solid;
+            border-width: 1px;
+            border-color: rgb(197, 218, 252);
+        }
+
+        .textArea {
+            width: 60%;
+            height: 250px;
+            margin-left: 30px;
+            margin-top: 15px;
+            font-family: inherit;
+            font-size: 12px;
+        }
+
+        .imageContainer {
+            top: -3%;
+        }
+    }
+
+    @media (min-width: 482px) and (max-width: 991px) {
+        .textBorder {
+            display: block;
+            width: 100%;
+            margin-bottom: 200px;
+            padding-right: 10px;
+        }
+
+        .textArea {
+            width: 100%;
+            margin-left: 10px;
+            margin-top: 5px;
+            font-family: inherit;
+            font-size: 12px
+        }
+
+        .imageContainer {
+            margin-left: auto;
+            margin-right: auto;
+            height: auto;
+            width: 66%;
+        }
+    }
+
+    @media (min-width: 346px) and (max-width: 481px) {
+        .textBorder {
+            display: block;
+            width: 100%;
+            margin-bottom: 150px;
+            padding-right: 10px;
+        }
+
+        .textArea {
+            width: 100%;
+            margin-left: 10px;
+            margin-top: 5px;
+            font-family: inherit;
+            font-size: 12px
+        }
+
+        .imageContainer {
+            margin-left: auto;
+            margin-right: auto;
+            height: auto;
+            width: 66%;
+            top: 0;
+        }
+    }
 </style>
 <div class="row_1">
     <div class="textBorder">
@@ -80,6 +170,7 @@
         </div>
     </div>
 </div>
-<div class="row_2">
-    <!-- Left Blank -->
+<div class="row_2 pad20">
+    <p>If you have any questions about our indoor containment system and/or collars, feel free to contact one of our
+        product experts at 1300 668 931.</p>
 </div>

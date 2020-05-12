@@ -38,6 +38,10 @@
         top: -10%;
     }
 
+    .imageContainerMobile {
+        display: none;
+    }
+
     .roundedImage {
         width: 95%;
         display: block;
@@ -50,7 +54,7 @@
     }
 
     .textArea li {
-        margin-bottom: 0 !important;
+        margin-bottom: 3px !important;
     }
 
     .textArea h1 {
@@ -77,6 +81,7 @@
     }
 
     @media (min-width: 992px) and (max-width: 1169px) {
+
         .textBorder {
             display: flex;
             width: 100%;
@@ -97,17 +102,27 @@
             font-size: 12px;
         }
 
+        .textArea li {
+            margin-bottom: 0 !important;
+        }
+
         .imageContainer {
             top: -3%;
         }
     }
 
     @media (min-width: 482px) and (max-width: 991px) {
+        .row_1 {
+            display: block;
+            margin-bottom: -50px;
+        }
+
         .textBorder {
             display: block;
             width: 100%;
-            margin-bottom: 200px;
             padding-right: 10px;
+            height: 350px;
+            max-height: 350px !important;
         }
 
         .textArea {
@@ -115,23 +130,46 @@
             margin-left: 10px;
             margin-top: 5px;
             font-family: inherit;
-            font-size: 12px
+            font-size: 16px;
         }
 
-        .imageContainer {
+        .textArea li {
+            margin-bottom: 0 !important;
+        }
+
+        .imageContainerMobile {
+            display: flex;
             margin-left: auto;
             margin-right: auto;
             height: auto;
             width: 66%;
+            position: relative;
+            top: -100px;
+        }
+
+        .imageContainer {
+            display: none;
+        }
+    }
+
+    @media (min-width: 482px) and (max-width: 627px) {
+        .imageContainerMobile {
+            top: -75px;
         }
     }
 
     @media (min-width: 346px) and (max-width: 481px) {
+        .row_1 {
+            display: block;
+            margin-bottom: -30px;
+        }
+
         .textBorder {
             display: block;
             width: 100%;
-            margin-bottom: 150px;
             padding-right: 10px;
+            height: 350px;
+            max-height: 450px;
         }
 
         .textArea {
@@ -139,15 +177,25 @@
             margin-left: 10px;
             margin-top: 5px;
             font-family: inherit;
-            font-size: 12px
+            font-size: 16px
         }
 
-        .imageContainer {
+        .textArea li {
+            margin-bottom: 0 !important;
+        }
+
+        .imageContainerMobile {
+            display: flex;
             margin-left: auto;
             margin-right: auto;
             height: auto;
             width: 66%;
-            top: 0;
+            position: relative;
+            top: -50px;
+        }
+
+        .imageContainer {
+            display: none;
         }
     }
 </style>
@@ -168,6 +216,9 @@
         <div class="imageContainer">
             <img class="roundedImage" src="{{media url=&quot;wysiwyg/dogs-indoors.jpg&quot;}}" alt="" />
         </div>
+    </div>
+    <div class="imageContainerMobile">
+        <img class="roundedImage" src="{{media url=&quot;wysiwyg/dogs-indoors.jpg&quot;}}" alt="" />
     </div>
 </div>
 <div class="row_2 pad20">

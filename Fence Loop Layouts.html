@@ -1,0 +1,275 @@
+<style>
+    .sliderRow >.sliderColumn {
+        padding: 4px 8px;
+    }
+
+    .sliderRow:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+    .sliderColumn {
+        float: left;
+        width: 25%;
+    }
+
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        padding-top: 100px;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: auto;
+        overflow: auto;
+        background-color: black;
+    }
+
+    .modalContent {
+        position: relative;
+        background-color: #fefefe;
+        margin: auto;
+        padding: 0;
+        width: 90%;
+        max-width: 1200px;
+    }
+
+    .modalContent .sliderRow {
+        background-color: black;
+    }
+
+    .close {
+        color: white;
+        position: absolute;
+        top: 10px;
+        right: 25px;
+        font-size: 35px;
+        font-weight: bold;
+    }
+
+    .close:hover,
+    .close:focus {
+        color: #999;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    .mySlides {
+        display: none;
+    }
+
+    .cursor {
+        cursor: pointer;
+    }
+
+    .prev,
+    .next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        width: auto;
+        padding: 16px;
+        margin-top: -50px;
+        color: white;
+        font-weight: bold;
+        font-size: 100px;
+        transition: 0.6s ease;
+        border-radius: 0 3px 3px 0;
+        user-select: none;
+        -webkit-user-select: none;
+    }
+
+    .next {
+        right: 0;
+        border-radius: 3px 0 0 3px;
+    }
+
+    .prev:hover,
+    .next:hover {
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    .numbertext {
+        color: #f2f2f2;
+        font-size: 12px;
+        padding: 8px 12px;
+        position: absolute;
+        top: 0;
+    }
+
+    img {
+        margin-bottom: -4px;
+    }
+
+    .captionContainer {
+        text-align: center;
+        background-color: black;
+        padding: 2px 16px;
+        color: white;
+    }
+
+    .demo {
+        opacity: 0.6;
+    }
+
+    .active,
+    .demo:hover {
+        opacity: 1;
+    }
+
+    img.hoverShadow {
+        transition: 0.3s;
+    }
+
+    .hoverShadow:hover {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+</style>
+<div class="sliderRow">
+    <div class="sliderColumn">
+        <img src="{{media url=&quot;wysiwyg/Standard_Loop_Layout.jpg&quot;}}" onclick="openModal();currentSlide(1)"
+            class="hoverShadow cursor">
+    </div>
+    <div class="sliderColumn">
+        <img src="{{media url=&quot;wysiwyg/Double_Loop_Layout_-_Front_of_House.jpg&quot;}}"
+            onclick="openModal();currentSlide(2)" class="hoverShadow cursor">
+    </div>
+    <div class="sliderColumn">
+        <img src="{{media url=&quot;wysiwyg/Double_Loop_Layout_-_Front_and_side_of_House.jpg&quot;}}"
+            onclick="openModal();currentSlide(3)" class="hoverShadow cursor">
+    </div>
+    <div class="sliderColumn">
+        <img src="{{media url=&quot;wysiwyg/Double_Loop_Layout_-_Driveway.jpg&quot;}}"
+            onclick="openModal();currentSlide(4)" class="hoverShadow cursor">
+    </div>
+</div>
+<div class="sliderRow">
+    <div class="sliderColumn">
+        <img src="{{media url=&quot;wysiwyg/Backyard_layout_using_the_front_of_house.jpg&quot;}}"
+            onclick="openModal();currentSlide(5)" class="hoverShadow cursor">
+    </div>
+    <div class="sliderColumn">
+        <img src="{{media url=&quot;wysiwyg/Backyard_Layout.jpg&quot;}}" onclick="openModal();currentSlide(6)"
+            class="hoverShadow cursor">
+    </div>
+    <div class="sliderColumn">
+        <img src="{{media url=&quot;wysiwyg/Backyard_layout_using_the_house.jpg&quot;}}"
+            onclick="openModal();currentSlide(7)" class="hoverShadow cursor">
+    </div>
+</div>
+<div id="myModal" class="modal">
+    <span class="close cursor" onclick="closeModal()">&times;</span>
+    <div class="modalContent">
+        <div class="mySlides">
+            <div class="numbertext">1 / 7</div>
+            <img src="{{media url=&quot;wysiwyg/Standard_Loop_Layout.jpg&quot;}}">
+        </div>
+        <div class="mySlides">
+            <div class="numbertext">2 / 7</div>
+            <img src="{{media url=&quot;wysiwyg/Double_Loop_Layout_-_Front_of_House.jpg&quot;}}">
+        </div>
+        <div class="mySlides">
+            <div class="numbertext">3 / 7</div>
+            <img src="{{media url=&quot;wysiwyg/Double_Loop_Layout_-_Front_and_side_of_House.jpg&quot;}}">
+        </div>
+        <div class="mySlides">
+            <div class="numbertext">4 / 7</div>
+            <img src="{{media url=&quot;wysiwyg/Double_Loop_Layout_-_Driveway.jpg&quot;}}">
+        </div>
+        <div class="mySlides">
+            <div class="numbertext">5 / 7</div>
+            <img src="{{media url=&quot;wysiwyg/Backyard_layout_using_the_front_of_house.jpg&quot;}}">
+        </div>
+        <div class="mySlides">
+            <div class="numbertext">6 / 7</div>
+            <img src="{{media url=&quot;wysiwyg/Backyard_Layout.jpg&quot;}}">
+        </div>
+        <div class="mySlides">
+            <div class="numbertext">7 / 7</div>
+            <img src="{{media url=&quot;wysiwyg/Backyard_layout_using_the_house.jpg&quot;}}">
+        </div>
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        <div class="captionContainer">
+            <p id="caption"></p>
+        </div>
+        <div class="sliderRow">
+            <div class="sliderColumn">
+                <img class="demo cursor" src="{{media url=&quot;wysiwyg/Standard_Loop_Layout.jpg&quot;}}"
+                    onclick="currentSlide(1)" alt="Standard Loop Layout">
+            </div>
+            <div class="sliderColumn">
+                <img class="demo cursor" src="{{media url=&quot;wysiwyg/Double_Loop_Layout_-_Front_of_House.jpg&quot;}}"
+                    onclick="currentSlide(2)" alt="Double Loop Layout front of house">
+            </div>
+            <div class="sliderColumn">
+                <img class="demo cursor"
+                    src="{{media url=&quot;wysiwyg/Double_Loop_Layout_-_Front_and_side_of_House.jpg&quot;}}"
+                    onclick="currentSlide(3)" alt="Double Loop Layout front and side">
+            </div>
+            <div class="sliderColumn">
+                <img class="demo cursor" src="{{media url=&quot;wysiwyg/Double_Loop_Layout_-_Driveway.jpg&quot;}}"
+                    onclick="currentSlide(4)" alt="Double Loop Layout - Driveway">
+            </div>
+        </div>
+        <div class="sliderRow">
+            <div class="sliderColumn">
+                <img class="demo cursor"
+                    src="{{media url=&quot;wysiwyg/Backyard_layout_using_the_front_of_house.jpg&quot;}}"
+                    onclick="currentSlide(5)" alt="Backyard Loop Layout">
+            </div>
+            <div class="sliderColumn">
+                <img class="demo cursor" src="{{media url=&quot;wysiwyg/Backyard_Layout.jpg&quot;}}"
+                    onclick="currentSlide(6)" alt="Backyard Loop Layout">
+            </div>
+            <div class="sliderColumn">
+                <img class="demo cursor" src="{{media url=&quot;wysiwyg/Backyard_layout_using_the_house.jpg&quot;}}"
+                    onclick="currentSlide(7)" alt="Backyard Loop Layout using the house">
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    function openModal() {
+        document.getElementById("myModal").style.display = "block";
+    }
+
+    function closeModal() {
+        document.getElementById("myModal").style.display = "none";
+    }
+
+    var slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("demo");
+        var captionText = document.getElementById("caption");
+        if (n > slides.length) {
+            slideIndex = 1
+        }
+        if (n < 1) {
+            slideIndex = slide.length
+        }
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+        captionText.innerHTML = dots[slideIndex - 1].alt;
+    }
+</script>

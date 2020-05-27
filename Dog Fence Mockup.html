@@ -247,7 +247,10 @@
     <div class="row_1">
         <div class="block_1">
             <div class="imageContainer">
-                <a class="replaceImg" title="" href="https://www.youtube.com/embed/saLCX0_GKoE"><img src="{{media url=&quot;wysiwyg/threedogsongrass.png&quot;}}" alt="" /></a>
+                <a title="" href="https://www.youtube.com/embed/saLCX0_GKoE"><img class="roundedImage" id="replaceImg" src="{{media url=&quot;wysiwyg/How-a-dog-fence-works-image.jpg&quot;}}" alt="" /></a>
+                <div id="playerContainer">
+                    <div id="player" width="311" height="177"></div>
+                </div>
             </div>
             <div class="textBorder">
                 <div class="textContainer">
@@ -279,28 +282,27 @@
         </div>
         <div class="block_3">
             <div class="imageContainer">
-                <img src="{{media url=&quot;wysiwyg/blacklab.png&quot;}}" width="311" height="177">
-            </div>
-            <div class="textBorder">
-                <div class="textContainer">
-                    <h3>Why Buy From Us</h3>
-                    <ul>
-                        <li>We have the safest and most reliable hidden dog fence systems in Australia</li>
-                        <li>No cheap, unreliable systems. 3-year Warranties!</li>
-                        <li>Real Electric Dog Fence Experts (Yes in Australia!) are here to help.</li>
-                    </ul>
-                </div>
+            <img class="roundedImage" src="{{media url=&quot;wysiwyg/blacklab.png&quot;}}" width="311" height="177">
+        </div>
+        <div class="textBorder">
+            <div class="textContainer">
+                <h3>Why Buy From Us</h3>
+                <ul>
+                    <li>We have the safest and most reliable hidden dog fence systems in Australia</li>
+                    <li>No cheap, unreliable systems. 3-year Warranties!</li>
+                    <li>Real Electric Dog Fence Experts (Yes in Australia!) are here to help.</li>
+                </ul>
             </div>
         </div>
     </div>
+</div>
 </div>
 <div class="categoryDescriptionMobile">
     <div class="row_1">
         <div class="block_1">
             <div class="imageContainer">
-                <iframe class="roundedImage" width="311" height="177" src="https://www.youtube.com/embed/saLCX0_GKoE"
-                    frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen></iframe>
+                <img class="roundedImage" src="{{media url=&quot;wysiwyg/How-a-dog-fence-works-image.jpg&quot;}}"
+                    alt="" />
             </div>
             <div class="textBorder">
                 <div class="textContainer">
@@ -432,3 +434,38 @@
         </div>
     </div>
 </div>
+<script>
+    var player;
+    $("#replaceImg").click(function() {
+        if($("#player").is("div"))
+        {
+            $(this).hide();
+            player = new YT.Player('player' , {
+                height: '335',
+                width: '596',
+                playerVars: { 'controls': 1, 'autohide': 1},
+                videoId: 'saLCX0_GKoE',
+                events: {
+                    'onReady': onPlayerReady,
+                    'onStateChange': onPlayerStateChange
+                }
+            });
+        }
+        else {
+            player.autohide=1;
+            player.playVideo();
+        }
+
+        function onPlayerReady(event) {
+            event.target.playVideo();
+        }
+
+        function onPlayerStateChange(event) {
+            if(event.data === 0) {
+                $("#player").remove();
+                $("#playerContainer").append('<div id="player" width="311"></div>');
+                $("#replaceImg").show();
+            }
+        }
+    });
+</script>

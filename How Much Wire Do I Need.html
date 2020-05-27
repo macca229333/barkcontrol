@@ -1,0 +1,47 @@
+<style>
+    
+</style>
+<div class="perimeterConverter">
+    <div class="converterTitle">
+        <h3>How Much Wire Do I Need?</h3>
+        <p>Enter the size of your property</p>
+    </div>
+    <div class="converterMain">
+        <p>
+            <label>Acre/s:</label>
+            <input id="inputAcre" type="number" placeholder="Acre" oninput="lengthConverter(this.id, this.value)"
+                onchange="lengthConverter(this.id, this.value)">
+        </p>
+        <p>
+            <label>Square Metres</label>
+            <input id="inputSqMetre" type="number" placeholder="Square Metres"
+                oninput="lengthConverter(this.id, this.value)" onchange="lengthConverter(this.id, this.value)">
+        </p>
+        <p>
+            <label>Perimeter</label>
+            <input id="inputPerimeter" type="number" placeholder="Perimeter"
+                oninput="lengthConverter(this.id, this.value)">
+        </p>
+    </div>
+    <div class="converterFooter">
+        <p>This converter is for square or rectangular properties when covering all four sides. Other shape properties,
+            creating internal zones (to cover gardens or chook pens) and the type of loop layout you need. Please factor
+            in the distance from where the transmitter is installed to the fence and back again.</p>
+    </div>
+</div>
+<script>
+    function lengthConverter(source,valNum) {
+        valNum = parseFloat(valNum);
+        var inputAcre = document.getElementById("inputAcre");
+        var inputSqMetre = document.getElementById("inputSqMetre");
+        var inputPerimeter = document.getElementById("inputPerimeter");
+        if (source=="inputAcre") {
+            inputSqMetre.value=(valNum*4046.86).toFixed(2);
+            inputPerimeter.value=(Math.sqrt(valNum*4046.86)*4).toFixed(2);
+        }
+        if (source=="inputSqMetre") {
+            inputAcre.value=(valNum/4046.86).toFixed(2);
+            inputPerimeter.value=(valNum/4).toFixed(2);
+        }
+    }
+</script>

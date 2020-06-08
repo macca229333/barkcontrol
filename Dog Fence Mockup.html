@@ -24,6 +24,13 @@
             bottom: -10%;
         }
 
+        #playerContainer {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            bottom: -10%;
+        }
+
         .roundedImage {
             border-radius: 15px;
         }
@@ -127,6 +134,10 @@
         .logoContainer img {
             width: auto;
             height: 50px;
+        }
+
+        #replaceImg {
+            cursor: pointer;
         }
     }
 
@@ -247,7 +258,7 @@
     <div class="row_1">
         <div class="block_1">
             <div class="imageContainer">
-                <a title="" href="https://www.youtube.com/embed/saLCX0_GKoE"><img class="roundedImage" id="replaceImg" src="{{media url=&quot;wysiwyg/How-a-dog-fence-works-image.jpg&quot;}}" alt="" /></a>
+                <img class="roundedImage" id="replaceImg" src="{{media url=&quot;wysiwyg/How-a-dog-fence-works-image.jpg&quot;}}" alt="" />
                 <div id="playerContainer">
                     <div id="player" width="311" height="177"></div>
                 </div>
@@ -434,7 +445,14 @@
         </div>
     </div>
 </div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script>
+    var tag = document.createElement('script');
+
+    tag.src = "https://www.youtube.com/iframe_api";
+    var firstScriptTag = document.getElementsByTagName('script')[0];
+    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
     var player;
     $("#replaceImg").click(function() {
         if($("#player").is("div"))

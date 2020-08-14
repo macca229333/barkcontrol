@@ -1,5 +1,5 @@
 <style>
-    
+
 </style>
 <div class="perimeterConverter">
     <div class="converterTitle">
@@ -13,14 +13,14 @@
                 onchange="lengthConverter(this.id, this.value)">
         </p>
         <p>
-            <label>Square Metres</label>
+            <label>Square Metres:</label>
             <input id="inputSqMetre" type="number" placeholder="Square Metres"
                 oninput="lengthConverter(this.id, this.value)" onchange="lengthConverter(this.id, this.value)">
         </p>
         <p>
-            <label>Perimeter</label>
+            <label>Metres of Wire:</label>
             <input id="inputPerimeter" type="number" placeholder="Perimeter"
-                oninput="lengthConverter(this.id, this.value)">
+                oninput="lengthConverter(this.id, this.value)" onchange="lengthConverter(this.id, this.value)">
         </p>
     </div>
     <div class="converterFooter">
@@ -30,18 +30,22 @@
     </div>
 </div>
 <script>
-    function lengthConverter(source,valNum) {
+    function lengthConverter(source, valNum) {
         valNum = parseFloat(valNum);
         var inputAcre = document.getElementById("inputAcre");
         var inputSqMetre = document.getElementById("inputSqMetre");
         var inputPerimeter = document.getElementById("inputPerimeter");
-        if (source=="inputAcre") {
-            inputSqMetre.value=(valNum*4046.86).toFixed(2);
-            inputPerimeter.value=(Math.sqrt(valNum*4046.86)*4).toFixed(2);
+        if (source == "inputAcre") {
+            inputSqMetre.value = (valNum * 4046.86).toFixed(2);
+            inputPerimeter.value = (Math.sqrt(valNum * 4046.86) * 4).toFixed(2);
         }
-        if (source=="inputSqMetre") {
-            inputAcre.value=(valNum/4046.86).toFixed(2);
-            inputPerimeter.value=(valNum/4).toFixed(2);
+        if (source == "inputSqMetre") {
+            inputAcre.value = (valNum / 4046.86).toFixed(2);
+            inputPerimeter.value = (Math.sqrt(valNum) * 4).toFixed(2);
+        }
+        if (source == "inputPerimeter") {
+            inputAcre.value = (Math.pow(valNum / 4, 2) / 4046.86).tofixed(2);
+            inputSqMetre.value = (Math.pow(valNum / 4, 2)).tofixed(2);
         }
     }
 </script>

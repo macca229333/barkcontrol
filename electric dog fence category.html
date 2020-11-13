@@ -1,0 +1,462 @@
+<style>
+    @media (min-width: 992px) {
+        .row_1 {
+            display: flex;
+            width: 100%;
+            padding: 10px;
+            overflow-x: auto;
+        }
+
+        .block_1,
+        .block_2,
+        .block_3 {
+            display: inline-block;
+            margin-top: -30px;
+            max-width: 30%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .imageContainer {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            bottom: -10%;
+        }
+        .roundedImage {
+            border-radius: 15px;
+        }
+
+        .textBorder {
+            border-radius: 15px;
+            background-color: #ffffff;
+            box-shadow: 0px 1px 3.8px 0.2px rgba(19, 19, 19, 0.45);
+            width: 100%;
+            height: 215px;
+            padding: 10px;
+
+        }
+
+        .textBorder h2,
+        .textBorder ul,
+        .textBorder p {
+            font-family: inherit;
+        }
+
+        .textBorder h2 {
+            text-align: center;
+            margin: 10px 0px 0px 0px !important;
+            font-weight: 700 !important;
+        }
+
+        .textContainer {
+            height: fit-content;
+            padding-top: 30px;
+        }
+
+        .textContainer a {
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .category-description img {
+            margin-top: 0px !important;
+        }
+
+        .categoryDescriptionMobile {
+            display: none;
+        }
+
+        .categoryDescriptionTablet {
+            display: none;
+        }
+
+        .borderBox {
+            background-color: #f6f6f6;
+            border-radius: 15px;
+            margin: 100px 30px 10px 30px;
+        }
+
+        .topSection {
+            display: flex;
+            justify-content: center;
+            position: relative;
+            top: -70px;
+        }
+
+        .bottomSection {
+            display: inline-flex;
+            position: relative;
+            top: -45px;
+        }
+
+        .mainText {
+            width: 33%;
+            text-align: center;
+            margin: 0px 15px 0px 15px;
+        }
+
+        .mainText h4 {
+            font-size: 16px;
+        }
+
+        .headingImage {
+            display: block;
+            margin-left: auto !important;
+            margin-right: auto !important;
+        }
+
+        .headingText {
+            text-align: center;
+        }
+
+        .headingText h2 {
+            font-weight: 700 !important;
+            font-size: xx-large;
+        }
+
+        .headingText p {
+            font-size: large;
+            font-weight: 600;
+        }
+
+        .logoContainer {
+            padding-bottom: 10px;
+        }
+
+        .logoContainer img {
+            width: auto;
+            height: 50px;
+        }
+
+        .replaceImg {
+            cursor: pointer;
+        }
+    }
+
+    @media (max-width: 991px) {
+        .categoryDescriptionDesktop {
+            display: none;
+        }
+
+        .block_1,
+        .block_2,
+        .block_3 {
+            width: 100%;
+            display: block;
+            padding: 5px 10px;
+        }
+
+        .textBorder {
+            width: 100%;
+            border-radius: 15px;
+            background-color: #ffffff;
+            box-shadow: 0px 1px 3.8px 0.2px rgba(19, 19, 19, 0.45);
+        }
+
+        .textBorder h2 {
+            text-align: center;
+            padding-top: 10px;
+            font-size: 16px;
+            font-weight: 700;
+        }
+
+        .category-description iframe {
+            margin-top: 0px !important;
+            display: block;
+            margin-right: auto;
+            margin-left: auto;
+        }
+
+        .category-description img {
+            margin-top: 0px !important;
+        }
+
+        .roundedImage {
+            border-radius: 15px;
+            max-width: 100%;
+        }
+
+        .imageContainer {
+            width: 100%;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .borderBox {
+            background-color: #f6f6f6;
+            border-radius: 15px;
+            margin: 100px 15px 10px 15px;
+        }
+
+        .headingImage {
+            display: block;
+            margin-left: auto !important;
+            margin-right: auto !important;
+            max-width: 50%;
+            min-width: 200px
+        }
+
+        .headingText {
+            text-align: center;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+
+        .headingText h2 {
+            font-weight: 700 !important;
+            margin-top: 5px;
+        }
+
+        .logoContainer {
+            padding-bottom: 10px;
+        }
+
+        .logoContainer img {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            max-width: fit-content;
+            width: auto;
+            height: 50px;
+        }
+
+        .mainText {
+            text-align: center;
+            margin: 0px 15px 0px 15px;
+        }
+
+        .topSection {
+            position: relative;
+            top: -70px;
+        }
+
+        .bottomSection {
+            position: relative;
+            top: -45px;
+        }
+    }
+
+    @media (min-width: 992px) and (max-width: 1380px) {
+        .textBorder {
+            height: 300px;
+        }
+    }
+
+    @media (min-width: 992px) and (max-width: 1024px) {
+        .roundedImage {
+            max-width: 100%;
+            height: 161px;
+        }
+    }
+
+        .playerContainer {
+            position: relative;
+            display: none;
+            justify-content: center;
+            bottom: -10%;
+        }
+</style>
+<div class="categoryDescriptionDesktop">
+    <div class="row_1">
+        <div class="block_1">
+            <div class="imageContainer">
+                <img class="roundedImage replaceImg" src="{{media url=&quot;wysiwyg/How-a-dog-fence-works-image.jpg&quot;}}" alt="" />
+                <div class="playerContainer">
+                   <iframe width="311" height="177" src="https://www.youtube.com/embed/saLCX0_GKoE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+            <div class="textBorder">
+                <div class="textContainer">
+                    <h2>Electric Dog Fence Basics</h2>
+                    <ul>
+                        <li>Want to know how a dog containment system works? Watch our short video to learn the basics
+                            now!</li>
+                        <li>We have dog fence systems for dogs of all sizes and types to suit any type of property.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="block_2">
+            <div class="imageContainer">
+                <img src="{{media url=&quot;wysiwyg/threedogsongrass.png&quot;}}" alt="" />
+            </div>
+            <div class="textBorder">
+                <div class="textContainer">
+                    <h2>Find the Right Hidden Fence</h2>
+                    <ul>
+                        <li>Use our filters to narrow down the best electric dog fence for you.</li>
+                        <li>Use our <a href="https://dev.barkcontrol.com.au/personalised-dog-fence-plan">Personalised Dog Fence Plan</a>
+                            and
+                            let us do the work.</li>
+                        <li>Call us! Our experts are here to help.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="block_3">
+            <div class="imageContainer">
+            <img class="roundedImage" src="{{media url=&quot;wysiwyg/blacklab.png&quot;}}" width="311" height="177">
+        </div>
+        <div class="textBorder">
+            <div class="textContainer">
+                <h2>Why Buy From Us</h2>
+                <ul>
+                    <li>We have the safest and most reliable hidden dog fence systems in Australia</li>
+                    <li>No cheap, unreliable systems. 3-year Warranties!</li>
+                    <li>Real Electric Dog Fence Experts (Yes in Australia!) are here to help.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<div class="categoryDescriptionMobile">
+    <div class="row_1">
+        <div class="block_1">
+            <div class="imageContainer">
+                <img class="roundedImage replaceImg" src="{{media url=&quot;wysiwyg/How-a-dog-fence-works-image.jpg&quot;}}"
+                    alt="" />
+                <div class="playerContainer">
+                   <iframe width="265" height="150" src="https://www.youtube.com/embed/saLCX0_GKoE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+            <div class="textBorder">
+                <div class="textContainer">
+                    <h2>Electric Dog Fence Basics</h2>
+                    <ul>
+                        <li>Want to know how a dog containment system works? Watch our short video to learn the basics
+                            now!</li>
+                        <li>We have dog fence systems for dogs of all sizes and types to suit any type of property.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="block_2">
+            <div class="textBorder">
+                <div class="textContainer">
+                    <h2>Find the Right Hidden Fence</h2>
+                    <ul>
+                        <li>Use our filters to narrow down the best electric dog fence for you.</li>
+                        <li>Use our <a href="https://dev.barkcontrol.com.au/personalised-dog-fence-plan">Personalised Dog Fence Plan</a>
+                            and
+                            let us do the work.</li>
+                        <li>Call us! Our experts are here to help.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="block_3 pad20">
+            <div class="textBorder">
+                <div class="textContainer">
+                    <h2>Why Buy From Us</h2>
+                    <ul>
+                        <li>We have the safest and most reliable hidden dog fence systems in Australia</li>
+                        <li>No cheap, unreliable systems. 3-year Warranties!</li>
+                        <li>Real Electric Dog Fence Experts (Yes in Australia!) are here to help.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="categoryDescriptionDesktop pad20">
+    <div class="borderBox">
+        <div class="topSection">
+            <div class="headingImageContainer">
+                <img class="headingImage" src="{{media url=&quot;wysiwyg/Lab_with_flags.png&quot;}}" alt="" />
+                <div class="headingText">
+                    <h2>Do Electric Dog Fences Really Work?</h2>
+                    <p>Yes, an electric dog fence or dog containment system will work...if you:</p>
+                </div>
+            </div>
+        </div>
+        <div class="bottomSection">
+            <div class="mainText">
+                <div class="logoContainer">
+                    <img src="{{media url=&quot;wysiwyg/ribbon-icon_4x.png&quot;}}" alt="" />
+                </div>
+                <h4>Buy a quality Hidden Dog Fence</h4>
+                <p>We receive several calls a day from people who buy 'cheap' systems that zap your dog anywhere in the
+                    yard, the wire breaks in your hand or the collars fall apart in no time.</p>
+                <p>All of our collared dog fence systems have three-year warranties.<strong>Don't risk your dog's
+                        welfare with an unsafe system!</strong></p>
+            </div>
+            <div class="mainText">
+                <div class="logoContainer">
+                    <img src="{{media url=&quot;wysiwyg/dog-and-house_4x.png&quot;}}" alt="" />
+                </div>
+                <h4>Purchase the Right System</h4>
+                <p>Not all dogs are the same, nor do we all have the same properties. It is vital to consider the type
+                    of dog, how they escape and the existing fences on your property to get the right dog fence.</p>
+                <p>Don't hesitate to call and let our dog containment experts help, or use our <strong><a
+                            href="https://www.barkcontrol.com.au/view/1044">Personalised Dog Fence
+                            Plan.</a></strong></p>
+            </div>
+            <div class="mainText">
+                <div class="logoContainer">
+                    <img src="{{media url=&quot;wysiwyg/dribbon-icon_4x.png&quot;}}" alt="" />
+                </div>
+                <h4>Do the Training!</h4>
+                <p>This is the last step. It would be unfair to expect your dog to 'figure it out for themselves'.</p>
+                <p>All systems come with a complete training guide that will teach you how to easily teach your dog it's
+                    new boundaries. To find out more about training a dog to use a dog containment system, click here.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="categoryDescriptionDesktop pad20">
+    <div class="borderBox">
+        <div class="topSection">
+            <div class="headingImageContainer">
+                <img class="headingImage roundedImage" src="{{media url=&quot;wysiwyg/dogs-with-person.jpg&quot;}}"
+                    alt="" />
+                <div class="headingText">
+                    <h2>Is a Hidden Fence For Dogs Easy to Set Up?</h2>
+                    <p>Absolutely! Follow these recommendations:</p>
+                </div>
+            </div>
+        </div>
+        <div class="bottomSection">
+            <div class="mainText">
+                <div class="logoContainer">
+                    <img src="{{media url=&quot;wysiwyg/planning-icon_4x.png&quot;}}" alt="" />
+                </div>
+                <h4>Planning is Essential</h4>
+                <p>Draw out your yard and work out the best/easiest way to run your wire to form your new containment
+                    area. Simple is better and use existing fencing wherever possible.</p>
+                <p>You do not need to bury the wire! With an electric dog fence system, attaching to existing fences
+                    with cable ties or U-shaped nails is fine.</p>
+            </div>
+            <div class="mainText">
+                <div class="logoContainer">
+                    <img src="{{media url=&quot;wysiwyg/house-and-fence_4x.png&quot;}}" alt="" />
+                </div>
+                <h4>Complete a Loop</h4>
+                <p>You need to run the wire from your transmitter and get back to it again (a loop). There are lots of
+                    ways to do this that suits a variety of different scenarios for every yard or property.</p>
+                <p>Click here to see various ways to complete a loop. There are videos too!</p>
+            </div>
+            <div class="mainText">
+                <div class="logoContainer">
+                    <img src="{{media url=&quot;wysiwyg/question-mark_4x.png&quot;}}" alt="" />
+                </div>
+                <h4>Still can't see how a dog containment system will work on your property?</h4>
+                <p>Our electric dog fence experts are here to work that out for you. With our experience there are often
+                    ways to run your loop that you might not see.</p>
+                <p>Contact us. We are happy to go over diagrams and maps and work it out for you!
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+setTimeout(function () {
+  jQuery('.replaceImg').on('click',function(){
+    jQuery(this).hide();
+    jQuery(this).next(".playerContainer").find("iframe").attr('src', jQuery(".playerContainer iframe").attr('src') + '?autoplay=1'); 
+    jQuery('.playerContainer').show();
+  });
+}, 1500);
+</script>

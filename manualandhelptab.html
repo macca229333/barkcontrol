@@ -1,0 +1,88 @@
+<style>
+    .productvideos {
+        margin-bottom: 15px;
+    }
+
+    .videoblock {
+        display: flex;
+    }
+
+    .videos {
+        display: block;
+        position: relative;
+        overflow: hidden;
+        padding-top: 28.125%;
+        margin: 10px 10px;
+        width: 50%;
+    }
+
+    .videos iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    .videostitle {
+        text-align: center;
+    }
+
+    .productmanual h2 {
+        margin: 0px 10px 10px 10px;
+    }
+
+    .productmanual a {
+        margin: 0px 10px 10px 10px;
+    }
+
+    .productvideos h2 {
+        margin: 0px 10px 10px 10px;
+    }
+
+    @media (max-width: 991px) {
+        .videoblock {
+            display: block;
+        }
+        
+        .videos {
+            display: block;
+            position: relative;
+            overflow: hidden;
+            padding-top: 56.25%;
+            margin: 10px 10px;
+            width: 100%;
+        }
+
+        .videos iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+        }
+    }
+</style>
+
+<div class="manualandvideos">
+    <div class="productmanual">
+        <h2>Product Manual</h2>
+        <a href="https://barkcontrol.darlivgroup.com.au/media/productattach//s/p/sportdog_sbc-r_no_bark_collar.pdf"><img src="{{media url=&quot;wysiwyg/pngegg.png&quot;}}"></a>
+        <a href="https://barkcontrol.darlivgroup.com.au/media/productattach//s/p/sportdog_sbc-r_no_bark_collar.pdf">SportDOG
+            SBC-R Product Manual PDF</a>
+    </div>
+    <div class="productvideos">
+        <div class="videoblock">
+            <div class="videos">
+                <iframe src="https://www.youtube.com/embed/kNimZk-6zfE" frameborder="0" allowfullscreen=""></iframe>
+            </div>
+            <div class="videos">
+                <iframe src="https://www.youtube.com/embed/uKM7IArtwWI" frameborder="0" allowfullscreen=""></iframe>
+            </div>
+        </div>
+    </div>
+</div>

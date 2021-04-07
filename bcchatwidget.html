@@ -1,62 +1,307 @@
 <script type="text/javascript">
-    var $zoho = $zoho || {}; $zoho.salesiq = $zoho.salesiq || { widgetcode: "8aa5ce862e5a6b9596b018f51e512f71098fb66e32ea9e397a06b7231fff531a1a2010ab7b6727677d37b27582c0e9c4", values: {}, ready: function () { } }; var d = document; s = d.createElement("script"); s.type = "text/javascript"; s.id = "zsiqscript"; s.src = "https://salesiq.zoho.com/widget"; t = d.getElementsByTagName("script")[0]; t.parentNode.insertBefore(s, t); d.write("<div id='zsiqwidget'></div>");
-    $zoho.salesiq.ready = function () {
+    if (window.location.href.indexOf("barkcontrol") > -1) {
+        var $zoho = $zoho || {};
+        $zoho.salesiq = $zoho.salesiq || {
+            widgetcode: "8aa5ce862e5a6b9596b018f51e512f71098fb66e32ea9e397a06b7231fff531a1a2010ab7b6727677d37b27582c0e9c4",
+            values: {},
+            ready: function () {}
+        };
+        var d = document;
+        s = d.createElement("script");
+        s.type = "text/javascript";
+        s.id = "zsiqscript";
+        s.src = "https://salesiq.zoho.com/widget";
+        t = d.getElementsByTagName("script")[0];
+        t.parentNode.insertBefore(s, t);
+        d.write("<div id='zsiqwidget'></div>");
+        $zoho.salesiq.ready = function () {
 
-        $zoho.salesiq.customfield.add({
+            if(window.location.href=="https://barkcontrol.darlivgroup.com.au/checkout/#shipping") {
+                $zoho.salesiq.floatbutton.visible("hide");
+            }
 
-
-            "name": "Contact Reason",
-            "hint": "Reason for Contact (Required)",
-            "type": "selectbox",
-            "required": "true",
-            "visibility": "offline",
-            "maxlength": "100",
-            "options": [{
-
-
-                "text": "I need sales advice",
-                "value": "I have a question about a product before I buy"
-            },
-
-
-            {
-
-
-                "text": "My product is not working",
-                "value": "My product is not working / I need technical support"
-            },
+            $zoho.salesiq.customfield.add({
 
 
-            {
+                "name": "Contact Reason",
+                "hint": "Reason for Contact (Required)",
+                "type": "selectbox",
+                "required": "true",
+                "visibility": "offline",
+                "maxlength": "100",
+                "options": [{
 
 
-                "text": "I want to return my product",
-                "value": "I want to return or exchange my product"
-            },
+                        "text": "I need sales advice",
+                        "value": "I have a question about a product before I buy"
+                    },
 
-            {
 
-                "text": "I want to change my order",
-                "value": "I want to cancel or change my order"
-            },
+                    {
 
-            {
 
-                "text": "Where is my order?",
-                "value": "What is the shipping status of my order"
-            },
+                        "text": "My product is not working",
+                        "value": "My product is not working / I need technical support"
+                    },
 
-            {
-                "text": "Your website is not working",
-                "value": "Your website is not working properly"
-            },
 
-            {
-                "text": "Other",
-                "value": "Other - TBC"
+                    {
 
-            }],
-            "callback": function (value) { }
-        });
+
+                        "text": "I want to return my product",
+                        "value": "I want to return or exchange my product"
+                    },
+
+                    {
+
+                        "text": "I want to change my order",
+                        "value": "I want to cancel or change my order"
+                    },
+
+                    {
+
+                        "text": "Where is my order?",
+                        "value": "What is the shipping status of my order"
+                    },
+
+                    {
+                        "text": "Your website is not working",
+                        "value": "Your website is not working properly"
+                    },
+
+                    {
+                        "text": "Other",
+                        "value": "Other - TBC"
+
+                    }
+                ],
+                "callback": function (value) {}
+            })
+        }
+    } else if (window.location.href.indexOf("catgenie") > -1) {
+        var $zoho = $zoho || {};
+        $zoho.salesiq = $zoho.salesiq || {
+            widgetcode: "d8d3376b2bd95d15e984f1da062079060f26154fd4a8d660a20e3aa764a79549",
+            values: {},
+            ready: function () {}
+        };
+        var d = document;
+        s = d.createElement("script");
+        s.type = "text/javascript";
+        s.id = "zsiqscript";
+        s.src = "https://salesiq.zoho.com/widget";
+        t = d.getElementsByTagName("script")[0];
+        t.parentNode.insertBefore(s, t);
+        d.write("<div id='zsiqwidget'></div>");
+        $zoho.salesiq.ready = function () {
+
+            $zoho.salesiq.customfield.add({
+
+
+                "name": "Contact Reason",
+                "hint": "Reason for Contact (Required)",
+                "type": "selectbox",
+                "required": "true",
+                "visibility": "offline",
+                "maxlength": "100",
+                "options": [{
+
+
+                        "text": "I need sales advice",
+                        "value": "I have a question about the CatGenie before I buy"
+                    },
+
+
+                    {
+
+
+                        "text": "I'm having an issue with my CatGenie",
+                        "value": "I'm having an issue with my CatGenie"
+                    },
+
+
+                    {
+
+
+                        "text": "What is the shipping status of my order?",
+                        "value": "What is the shipping status of my order?"
+                    },
+
+                    {
+
+                        "text": "I want to change my order",
+                        "value": "I would like to change or cancel my order"
+                    },
+
+                    {
+
+                        "text": "I would like to return my CatGenie",
+                        "value": "I would like to return my CatGenie"
+                    },
+
+                    {
+                        "text": "Your website is not working",
+                        "value": "I'm having an issue with your website"
+                    },
+
+                    {
+                        "text": "Other",
+                        "value": "I have some feedback for you"
+
+                    }
+                ],
+                "callback": function (value) {}
+            })
+        }
+    } else if (window.location.href.indexOf("k9control") > -1) {
+        var $zoho = $zoho || {};
+        $zoho.salesiq = $zoho.salesiq || {
+            widgetcode: "2542ef6595095c5de0af7ecbad999edf75968381f8948ac2459e952991441307",
+            values: {},
+            ready: function () {}
+        };
+        var d = document;
+        s = d.createElement("script");
+        s.type = "text/javascript";
+        s.id = "zsiqscript";
+        s.src = "https://salesiq.zoho.com/widget";
+        t = d.getElementsByTagName("script")[0];
+        t.parentNode.insertBefore(s, t);
+        d.write("<div id='zsiqwidget'></div>");
+        $zoho.salesiq.ready = function () {
+
+            $zoho.salesiq.customfield.add({
+
+
+                "name": "Contact Reason",
+                "hint": "Reason for Contact (Required)",
+                "type": "selectbox",
+                "required": "true",
+                "visibility": "offline",
+                "maxlength": "100",
+                "options": [{
+
+
+                        "text": "I need sales advice",
+                        "value": "I have a question about a product before I buy"
+                    },
+
+
+                    {
+
+
+                        "text": "My product is not working",
+                        "value": "My product is not working / I need technical support"
+                    },
+
+
+                    {
+
+
+                        "text": "I want to return my product",
+                        "value": "I want to return or exchange my product"
+                    },
+
+                    {
+
+                        "text": "I want to change my order",
+                        "value": "I want to cancel or change my order"
+                    },
+
+                    {
+
+                        "text": "Where is my order?",
+                        "value": "What is the shipping status of my order"
+                    },
+
+                    {
+                        "text": "Your website is not working",
+                        "value": "Your website is not working properly"
+                    },
+
+                    {
+                        "text": "Other",
+                        "value": "Other - TBC"
+
+                    }
+                ],
+                "callback": function (value) {}
+            });
+        }
+    } else if (window.location.href.indexOf("readypetgo") > -1) {
+        var $zoho = $zoho || {};
+        $zoho.salesiq = $zoho.salesiq || {
+            widgetcode: "d224a5450a2c1738cd25930de52688dacf2dcc90abc4e33c92f586a43b65e030",
+            values: {},
+            ready: function () {}
+        };
+        var d = document;
+        s = d.createElement("script");
+        s.type = "text/javascript";
+        s.id = "zsiqscript";
+        s.src = "https://salesiq.zoho.com/widget";
+        t = d.getElementsByTagName("script")[0];
+        t.parentNode.insertBefore(s, t);
+        d.write("<div id='zsiqwidget'></div>");
+        $zoho.salesiq.ready = function () {
+
+            $zoho.salesiq.customfield.add({
+
+
+                "name": "Contact Reason",
+                "hint": "Reason for Contact (Required)",
+                "type": "selectbox",
+                "required": "true",
+                "visibility": "offline",
+                "maxlength": "100",
+                "options": [{
+
+
+                        "text": "I need sales advice",
+                        "value": "I have a question about a product before I buy"
+                    },
+
+
+                    {
+
+
+                        "text": "My product is not working",
+                        "value": "My product is not working / I need technical support"
+                    },
+
+
+                    {
+
+
+                        "text": "I want to return my product",
+                        "value": "I want to return or exchange my product"
+                    },
+
+                    {
+
+                        "text": "I want to change my order",
+                        "value": "I want to cancel or change my order"
+                    },
+
+                    {
+
+                        "text": "Where is my order?",
+                        "value": "What is the shipping status of my order"
+                    },
+
+                    {
+                        "text": "Your website is not working",
+                        "value": "Your website is not working properly"
+                    },
+
+                    {
+                        "text": "Other",
+                        "value": "Other - TBC"
+
+                    }
+                ],
+                "callback": function (value) {}
+            })
+        }
     }
 </script>

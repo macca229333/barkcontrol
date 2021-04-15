@@ -1,0 +1,45 @@
+<!-- Basic Product Information -->
+<g:id>{{product.sku as="sku"}}</g:id>
+<title>{{product.pla_title}}</title>
+<link>{{parent.url | product.url}}</link>
+<description>{{product.pla_full_description output="strip_tags($self)"}}</description>
+<g:google_product_category>{{product.google_product_category}}</g:google_product_category>
+
+<g:product_type>{{product.google_product_type}}</g:product_type>
+
+<g:image_link>{{product.image_link index="0"}}</g:image_link>
+
+<!-- Availability & Price -->
+<g:availability>{{product.google_stock_control}}</g:availability>
+<g:price>{{product.price if="sku==1600" currency=AUD vat_rate=0 suffix=" AUD" output="34.95"}}</g:price>
+<g:price>{{product.price if="sku==PHR1069" currency=AUD vat_rate=0 suffix=" AUD" output="265.49"}}</g:price>
+<g:price>{{product.price if="sku==KUR1300" currency=AUD vat_rate=0 suffix=" AUD" output="94.99"}}</g:price>
+<g:price>{{product.price if="sku==KUR1400" currency=AUD vat_rate=0 suffix=" AUD" output="94.99"}}</g:price>
+<g:price>{{product.price if="sku==KUR1600" currency=AUD vat_rate=0 suffix=" AUD" output="99.99"}}</g:price>
+<g:price>{{product.price if="sku==PHR1255" currency=AUD vat_rate=0 suffix=" AUD" output="118.99"}}</g:price>
+<g:price>{{product.price if="sku==CEN350" currency=AUD vat_rate=0 suffix=" AUD" output="108.00"}}</g:price>
+<g:price>{{product.price if="sku==KUR1100" currency=AUD vat_rate=0 suffix=" AUD" output="74.99"}}</g:price>
+<g:price>{{product.price if="sku==KUR1200" currency=AUD vat_rate=0 suffix=" AUD" output="73.99"}}</g:price>
+<g:price>{{product.price if="sku==KUR1500" currency=AUD vat_rate=0 suffix=" AUD" output="89.99"}}</g:price>
+<g:price>{{product.price if="sku==PHR1200" currency=AUD vat_rate=0 suffix=" AUD" output="67.49"}}</g:price>
+<g:price>{{product.price if="sku==PHR1235" currency=AUD vat_rate=0 suffix=" AUD" output="85.49"}}</g:price>
+<g:price>{{product.price currency=AUD vat_rate=0 suffix=" AUD"}}</g:price>
+
+<g:condition>{{product.condition}}</g:condition>
+<!-- Unique Product Identifiers-->
+<g:brand>{{product.brand}}</g:brand>
+<g:gtin>{{product.gtin}}</g:gtin>
+<g:mpn>{{product.mpn}}</g:mpn>
+
+<!-- Product Variants -->
+<g:item_group_id>{{product.item_group_id}}</g:item_group_id>
+
+<!-- Shipping -->
+<g:shipping_weight>{{product.weight output="float($self,2)" suffix="kg"}}</g:shipping_weight>
+<g:shipping_label>{{product.shipping_label}}</g:shipping_label>
+
+<!-- AdWords attributes -->
+<g:custom_label_1>{{product.custom_label_1}}</g:custom_label_1>
+<g:custom_label_2>{{product.brand}}</g:custom_label_2>
+<g:custom_label_3>{{product.custom_label_3}}</g:custom_label_3>
+<g:custom_label_4>{{product.custom_label_4}}</g:custom_label_4>
